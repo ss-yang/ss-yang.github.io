@@ -67,5 +67,7 @@ theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
-deploy: master
-  type:
+deploy: 
+  type: git
+  repo: https://github.com/ss-yang/ss-yang.github.io.git
+  branch: master
