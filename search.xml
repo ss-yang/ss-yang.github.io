@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[Android - ToolBar searchView 实现搜索框]]></title>
+    <url>%2F2017%2F05%2F02%2FAndroid-ToolBar-searchView-%E5%AE%9E%E7%8E%B0%E6%90%9C%E7%B4%A2%E6%A1%86%2F</url>
+    <content type="text"><![CDATA[在ToolBar上可以很方便的用widget.SearchView实现搜索功能。一般情况下，SearchView通常有两种实现方案： 在当前Activity处理搜索逻辑 首先在menu中新增item 12345&lt;item android:id=&quot;@+id/toolbar_search&quot; android:title=&quot;Search&quot; app:actionViewClass=&quot;android.support.v7.widget.SearchView&quot; app:showAsAction=&quot;always&quot;/&gt; onCreateOptionsMenu中增加如下代码： 1234567891011121314151617181920212223 public boolean onCreateOptionsMenu(Menu menu)&#123; getMenuInflater().inflate(R.menu.tool_bar,menu); //Toolbar的搜索框 MenuItem searchItem = menu.findItem(R.id.toolbar_search); SearchView searchView = null; if (searchItem != null) &#123; searchView = (SearchView) searchItem.getActionView(); &#125; searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() &#123; @Override public boolean onQueryTextSubmit(String query) &#123; //处理搜索结果 Toast.makeText(MainActivity.this,&quot;搜索: &quot; + query,Toast.LENGTH_LONG).show(); return false; &#125; @Override public boolean onQueryTextChange(String s) &#123; return false; &#125; &#125;); return true;&#125; 在新Activity处理搜索逻辑 在menu中新增item（同上） 在onCreateOptionsMenu中增加如下代码： 123456789101112131415public boolean onCreateOptionsMenu(Menu menu) &#123; MenuInflater menuInflater = getMenuInflater(); menuInflater.inflate(R.menu.dashboard, menu); MenuItem searchItem = menu.findItem(R.id.action_search); SearchManager searchManager = (SearchManager) MainActivity.this.getSystemService(Context.SEARCH_SERVICE); SearchView searchView = null; if (searchItem != null) &#123; searchView = (SearchView) searchItem.getActionView(); &#125; if (searchView != null) &#123; searchView.setSearchableInfo(searchManager.getSearchableInfo(MainActivity.this.getComponentName())); &#125; return super.onCreateOptionsMenu(menu);&#125; 在res/xml/下新建searchable.xml文件，内容如下： 1234&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&lt;searchable xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;android:hint=&quot;@string/search_hint&quot;android:label=&quot;@string/app_name&quot; /&gt; 新建处理搜索结果的activity：SearchResultsActivity AndroidManifest文件添加下面的代码： 1234567891011121314&lt;activity android:name=&quot;com.example.SearchResultsActivity&quot; android:label=&quot;@string/app_name&quot;&gt; &lt;intent-filter&gt; &lt;action android:name=&quot;android.intent.action.SEARCH&quot; /&gt; &lt;/intent-filter&gt; &lt;intent-filter&gt; &lt;action android:name=&quot;android.intent.action.VIEW&quot; /&gt; &lt;/intent-filter&gt; &lt;meta-data android:name=&quot;android.app.searchable&quot; android:resource=&quot;@xml/searchable&quot; /&gt;&lt;/activity&gt; 在SearchResultsActivity里面处理搜索结果]]></content>
+      <categories>
+        <category>Android</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[centos7 创建应用程序快捷启动器的方法]]></title>
+    <url>%2F2017%2F04%2F30%2Fcentos7-%E5%88%9B%E5%BB%BA%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E5%BF%AB%E6%8D%B7%E5%90%AF%E5%8A%A8%E5%99%A8%E7%9A%84%E6%96%B9%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[原因在linux下装好了android studio, 却发现只能在安装目录下通过terminal执行studio.sh来运行，这样明显很不方便。但作为一个linux新司机，并不知道怎么办。桌面右建-&gt;新建启动器，centos里根本没有这一项。后来因为某些原因需要重装中国版的firefox，官方安装包下载下来后，也是直接解压使用的(需要从terminal启动）。同一个问题遇到两次，不能忍。 解决方法查资料后得知，centos 的程序图表都在/usr/share/applications/文件夹下，里面都是.desktop文件。于是问题迎刃而解。 新建一个android-studio.desktop文件，内容如下： [Desktop Entry] Encoding=UTF-8 Name=Android Studio 2.3 Comment=Android Studio Comment[zh_CN]=安卓开发 Exec=/usr/local/bin/android-studio #运行路径 Icon=/opt/android-studio/bin/studio.png #图标 Categories=Application;Development;Android; #分类：这个将在应用的编程分类中 Actions=NewWindow;NewPrivateWindow; Type=Application Terminal=0 #是否命令行形式 至此，应用程序菜单里面就有了刚刚添加的启动器了，也可以将desktop文件复制到桌面。]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+</search>
