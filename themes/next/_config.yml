@@ -71,6 +71,15 @@ menu_icons:
   commonweal: heartbeat
 
 
+# npm install hexo-generator-sitemap --save   (win已安装)
+# npm install hexo-generator-baidu-sitemap --save  （未安装）
+#
+# 自动生成sitemap
+sitemap:
+path: sitemap.xml
+#baidusitemap:
+#path: baidusitemap.xml
+
 
 
 # ---------------------------------------------------------------
@@ -422,8 +431,8 @@ busuanzi_count:
   # custom uv span for the whole site
   site_uv: true
   #site_uv_header: <i class="fa fa-user"></i>
-  site_uv_header: 您是第位
-  site_uv_footer: 访客
+  site_uv_header: 您是第
+  site_uv_footer: 位访客
   # custom pv span for the whole site
   site_pv: true
   #site_pv_header: <i class="fa fa-eye"></i>
