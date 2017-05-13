@@ -1,5 +1,5 @@
 title:
-  archive: 归档
+  archive: 足迹
   category: 分类
   tag: 标签
   schedule: 日程表
@@ -8,7 +8,7 @@ author: 博主
 
 menu:
   home: 首页
-  archives: 归档
+  archives: 足迹
   categories: 分类
   tags: 标签
   about: 关于
