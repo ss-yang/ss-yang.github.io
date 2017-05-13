@@ -90,7 +90,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="hadoop,linux," />
 
 
 
@@ -106,16 +106,17 @@
 
 
 
-<meta name="description" content="来晚了…">
-<meta property="og:type" content="website">
-<meta property="og:title" content="木 杨">
-<meta property="og:url" content="https://ss-yang.github.io/about/index.html">
+<meta name="description" content="环境： centos 64 1611 hadoop2.7.3a jdk1.8.0_131  1. linux安装1. 安装虚拟机软件（VirtualBox和VMWare都可以）2. 新建centos虚拟机，挂载centos7镜像3. 选择最小安装+开发工具 2. 安装Hadoop前的准备安装hadoop可以用root用户也可以新建一个用户,建议新建一个用户。 1. 把ip地址改为静态ip，以免以后">
+<meta name="keywords" content="hadoop,linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hadoop - CentOS7虚拟机中搭建Hadoop集群（一）">
+<meta property="og:url" content="https://ss-yang.github.io/2017/05/11/Hadoop-CentOS7虚拟机中搭建Hadoop集群（一）/index.html">
 <meta property="og:site_name" content="木 杨">
-<meta property="og:description" content="来晚了…">
-<meta property="og:updated_time" content="2017-05-13T08:47:58.530Z">
+<meta property="og:description" content="环境： centos 64 1611 hadoop2.7.3a jdk1.8.0_131  1. linux安装1. 安装虚拟机软件（VirtualBox和VMWare都可以）2. 新建centos虚拟机，挂载centos7镜像3. 选择最小安装+开发工具 2. 安装Hadoop前的准备安装hadoop可以用root用户也可以新建一个用户,建议新建一个用户。 1. 把ip地址改为静态ip，以免以后">
+<meta property="og:updated_time" content="2017-05-11T15:07:26.003Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="木 杨">
-<meta name="twitter:description" content="来晚了…">
+<meta name="twitter:title" content="Hadoop - CentOS7虚拟机中搭建Hadoop集群（一）">
+<meta name="twitter:description" content="环境： centos 64 1611 hadoop2.7.3a jdk1.8.0_131  1. linux安装1. 安装虚拟机软件（VirtualBox和VMWare都可以）2. 新建centos虚拟机，挂载centos7镜像3. 选择最小安装+开发工具 2. 安装Hadoop前的准备安装hadoop可以用root用户也可以新建一个用户,建议新建一个用户。 1. 把ip地址改为静态ip，以免以后">
 
 
 
@@ -143,13 +144,13 @@
 
 
 
-  <link rel="canonical" href="https://ss-yang.github.io/about/"/>
+  <link rel="canonical" href="https://ss-yang.github.io/2017/05/11/Hadoop-CentOS7虚拟机中搭建Hadoop集群（一）/"/>
 
 
 
 
 
-  <title> | 木 杨</title>
+  <title>Hadoop - CentOS7虚拟机中搭建Hadoop集群（一） | 木 杨</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -174,7 +175,7 @@
     
   
 
-  <div class="container sidebar-position-right  ">
+  <div class="container sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -313,19 +314,276 @@
             
 
   <div id="posts" class="posts-expand">
-  <header class="post-header">
+    
 
-	<h1 class="post-title" itemprop="name headline"></h1>
+  
 
+  
+  
+  
 
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://ss-yang.github.io/2017/05/11/Hadoop-CentOS7虚拟机中搭建Hadoop集群（一）/">
 
-</header>
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="YangSheng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/the.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="木 杨">
+    </span>
 
     
-    
-      <p>来晚了…</p>
+      <header class="post-header">
 
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Hadoop - CentOS7虚拟机中搭建Hadoop集群（一）
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-11T21:39:16+08:00">
+                2017-05-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/linux/" itemprop="url" rel="index">
+                    <span itemprop="name">linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">阅读量
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
     
+
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>环境：</p>
+<p>centos 64 1611</p>
+<p>hadoop2.7.3a</p>
+<p>jdk1.8.0_131</p>
+<hr>
+<h2 id="1-linux安装"><a href="#1-linux安装" class="headerlink" title="1. linux安装"></a>1. linux安装</h2><h3 id="1-安装虚拟机软件（VirtualBox和VMWare都可以）"><a href="#1-安装虚拟机软件（VirtualBox和VMWare都可以）" class="headerlink" title="1. 安装虚拟机软件（VirtualBox和VMWare都可以）"></a>1. 安装虚拟机软件（VirtualBox和VMWare都可以）</h3><h3 id="2-新建centos虚拟机，挂载centos7镜像"><a href="#2-新建centos虚拟机，挂载centos7镜像" class="headerlink" title="2. 新建centos虚拟机，挂载centos7镜像"></a>2. 新建centos虚拟机，挂载centos7镜像</h3><h3 id="3-选择最小安装-开发工具"><a href="#3-选择最小安装-开发工具" class="headerlink" title="3. 选择最小安装+开发工具"></a>3. 选择最小安装+开发工具</h3><hr>
+<h2 id="2-安装Hadoop前的准备"><a href="#2-安装Hadoop前的准备" class="headerlink" title="2. 安装Hadoop前的准备"></a>2. 安装Hadoop前的准备</h2><p>安装hadoop可以用root用户也可以新建一个用户,建议新建一个用户。</p>
+<h3 id="1-把ip地址改为静态ip，以免以后要改来改去"><a href="#1-把ip地址改为静态ip，以免以后要改来改去" class="headerlink" title="1. 把ip地址改为静态ip，以免以后要改来改去"></a>1. 把ip地址改为静态ip，以免以后要改来改去</h3><p>修改网络连接配置文件</p>
+<pre><code>vi /etc/sysconfig/network-scripts/ifcfg-eth0
+...
+BOOTPRORO=static
+IPADDR=ip地址
+...
+</code></pre><h3 id="2-设置DNS"><a href="#2-设置DNS" class="headerlink" title="2. 设置DNS"></a>2. 设置DNS</h3><pre><code>vi /etc/resolv.conf
+nameserver 114.114.114.114
+</code></pre><h3 id="3-测试一下网络是不是正常"><a href="#3-测试一下网络是不是正常" class="headerlink" title="3. 测试一下网络是不是正常"></a>3. 测试一下网络是不是正常</h3><h3 id="4-修改主机名"><a href="#4-修改主机名" class="headerlink" title="4. 修改主机名"></a>4. 修改主机名</h3><pre><code>vi /etc/sysconfig/network
+NETWORKING=yes
+HOSTNAME=yourname
+
+:wq
+</code></pre><h3 id="5-关防火墙"><a href="#5-关防火墙" class="headerlink" title="5. 关防火墙"></a>5. 关防火墙</h3><pre><code>#查看防火墙状态
+service iptables status
+#关闭防火墙
+service iptables stop
+#查看防火墙开机启动状态
+chkconfig iptables --list
+#关闭防火墙开机启动
+chkconfig iptables off
+</code></pre><h3 id="6-配置ssh免密码登陆"><a href="#6-配置ssh免密码登陆" class="headerlink" title="6. 配置ssh免密码登陆"></a>6. 配置ssh免密码登陆</h3><p>在<strong>每台</strong>服务器上生成公钥密钥，再将<strong>公钥</strong>合并到master的authorized_keys文件上。</p>
+<p><strong>注意！！master和slave都要用相同的user和group  (这里为hadoop)</strong></p>
+<ol>
+<li><p>centos默认关闭ssh免密码登陆，需要到/etc/ssh/sshd_config文件把下面两行取消注释：</p>
+<pre><code>RSAAuthentication yes
+PubkeyAuthentication yes
+</code></pre></li>
+<li><p>然后，在master和每个slave上分别生成密钥：</p>
+<pre><code>ssh-keygen -t rsa
+</code></pre></li>
+<li><p>将slave的公钥合并到authorized_keys文件，在master中进入/home/hadoop/.ssh目录，用重定向符号合并：</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cat id_rsa.pub&gt;&gt; authorized_keys</div><div class="line">ssh hadoop@192.168.0.183 cat ~/.ssh/id_rsa.pub&gt;&gt; authorized_keys</div><div class="line">ssh hadoop@192.168.0.184 cat ~/.ssh/id_rsa.pub&gt;&gt; authorized_keys</div></pre></td></tr></table></figure>
+</li>
+<li><p>合并完成后，再将master的authorized_keys和known_hosts文件通过scp命令复制到每个slave的.ssh目录里，至此，每台slave和master都互有公钥。</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">scp /home/hadoop/.ssh/known_hosts hadoop@192.168.5.134:/home/hadoop/.ssh/</div><div class="line">scp /home/hadoop/.ssh/authorized_keys hadoop@192.168.5.134:/home/hadoop/.ssh/</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol>
+<li><p>回master测试，已经可以无需密码登陆其他slave了(第一次需要密码)，如果失败，看6。</p>
+<pre><code>[hadoop@yang .ssh]$ ssh hadoop@192.168.5.132
+Last login: Thu May 11 20:51:47 2017 from 192.168.5.133
+[hadoop@yang01 ~]$
+</code></pre></li>
+<li><p>如果免密码登陆失败，到slave把authorized_keys的权限改成“-rw——-”就可以了：</p>
+<pre><code>chmod 600 authorized_keys
+[hadoop@yang01 .ssh]$ ll
+-rw-------. 1 hadoop hadoop 1183 5月  11 20:18 authorized_keys
+</code></pre></li>
+</ol>
+<h3 id="7-安装jdk"><a href="#7-安装jdk" class="headerlink" title="7. 安装jdk"></a>7. 安装jdk</h3><ol>
+<li>到官网下载最新jkd版本的rpm包</li>
+<li>rpm -ivh jdk**.rpm</li>
+<li>配置环境变量</li>
+<li>java -version 测试</li>
+</ol>
+<hr>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/uploads/wechat.png" alt="YangSheng WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/uploads/alipay.png" alt="YangSheng Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/hadoop/" rel="tag"># hadoop</a>
+          
+            <a href="/tags/linux/" rel="tag"># linux</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/05/02/Android-ToolBar-searchView-实现搜索框/" rel="next" title="Android - ToolBar searchView 实现搜索框">
+                <i class="fa fa-chevron-left"></i> Android - ToolBar searchView 实现搜索框
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/05/13/Android-RecyclerView通过addOnItemTouchListener处理onClick点击事件/" rel="prev" title="Android-RecyclerView通过addOnItemTouchListener处理onClick点击事件">
+                Android-RecyclerView通过addOnItemTouchListener处理onClick点击事件 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
   </div>
 
 
@@ -357,8 +615,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/the.jpg"
@@ -440,6 +707,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-linux安装"><span class="nav-number">1.</span> <span class="nav-text">1. linux安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-安装虚拟机软件（VirtualBox和VMWare都可以）"><span class="nav-number">1.1.</span> <span class="nav-text">1. 安装虚拟机软件（VirtualBox和VMWare都可以）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-新建centos虚拟机，挂载centos7镜像"><span class="nav-number">1.2.</span> <span class="nav-text">2. 新建centos虚拟机，挂载centos7镜像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-选择最小安装-开发工具"><span class="nav-number">1.3.</span> <span class="nav-text">3. 选择最小安装+开发工具</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-安装Hadoop前的准备"><span class="nav-number">2.</span> <span class="nav-text">2. 安装Hadoop前的准备</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-把ip地址改为静态ip，以免以后要改来改去"><span class="nav-number">2.1.</span> <span class="nav-text">1. 把ip地址改为静态ip，以免以后要改来改去</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-设置DNS"><span class="nav-number">2.2.</span> <span class="nav-text">2. 设置DNS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-测试一下网络是不是正常"><span class="nav-number">2.3.</span> <span class="nav-text">3. 测试一下网络是不是正常</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-修改主机名"><span class="nav-number">2.4.</span> <span class="nav-text">4. 修改主机名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-关防火墙"><span class="nav-number">2.5.</span> <span class="nav-text">5. 关防火墙</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-配置ssh免密码登陆"><span class="nav-number">2.6.</span> <span class="nav-text">6. 配置ssh免密码登陆</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-安装jdk"><span class="nav-number">2.7.</span> <span class="nav-text">7. 安装jdk</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -567,6 +850,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
 
   
 
