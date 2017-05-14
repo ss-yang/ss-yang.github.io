@@ -90,7 +90,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Android," />
 
 
 
@@ -106,16 +106,17 @@
 
 
 
-<meta name="description" content="Never give in, never give up.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="木 杨">
-<meta property="og:url" content="https://ss-yang.github.io/tags/index.html">
+<meta name="description" content="Intent intent n. 意图；目的；  Intent最常见的用法是启动活动、服务等，实现Activity间跳转。 那么问题来了，在跳转的时候，怎样给下一个Activity捎一些数据呢？ 三种方法 putExtra serializable parcelable  - putExtra()Intent类提供了putExtra()方法，可以向intent对象添加一些常见类型的附加数据。只要在">
+<meta name="keywords" content="Android">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android-用Intent在活动之间传递数据的三种方法">
+<meta property="og:url" content="https://ss-yang.github.io/2017/05/14/Android-用Intent在活动之间传递数据的三种方法/index.html">
 <meta property="og:site_name" content="木 杨">
-<meta property="og:description" content="Never give in, never give up.">
-<meta property="og:updated_time" content="2017-05-13T08:40:39.389Z">
+<meta property="og:description" content="Intent intent n. 意图；目的；  Intent最常见的用法是启动活动、服务等，实现Activity间跳转。 那么问题来了，在跳转的时候，怎样给下一个Activity捎一些数据呢？ 三种方法 putExtra serializable parcelable  - putExtra()Intent类提供了putExtra()方法，可以向intent对象添加一些常见类型的附加数据。只要在">
+<meta property="og:updated_time" content="2017-05-14T09:18:15.859Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="木 杨">
-<meta name="twitter:description" content="Never give in, never give up.">
+<meta name="twitter:title" content="Android-用Intent在活动之间传递数据的三种方法">
+<meta name="twitter:description" content="Intent intent n. 意图；目的；  Intent最常见的用法是启动活动、服务等，实现Activity间跳转。 那么问题来了，在跳转的时候，怎样给下一个Activity捎一些数据呢？ 三种方法 putExtra serializable parcelable  - putExtra()Intent类提供了putExtra()方法，可以向intent对象添加一些常见类型的附加数据。只要在">
 
 
 
@@ -143,13 +144,13 @@
 
 
 
-  <link rel="canonical" href="https://ss-yang.github.io/tags/"/>
+  <link rel="canonical" href="https://ss-yang.github.io/2017/05/14/Android-用Intent在活动之间传递数据的三种方法/"/>
 
 
 
 
 
-  <title>标签 | 木 杨</title>
+  <title>Android-用Intent在活动之间传递数据的三种方法 | 木 杨</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -174,7 +175,7 @@
     
   
 
-  <div class="container sidebar-position-right  ">
+  <div class="container sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -313,25 +314,329 @@
             
 
   <div id="posts" class="posts-expand">
-  <header class="post-header">
+    
 
-	<h1 class="post-title" itemprop="name headline"></h1>
+  
 
+  
+  
+  
 
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://ss-yang.github.io/2017/05/14/Android-用Intent在活动之间传递数据的三种方法/">
 
-</header>
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="YangSheng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/the.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="木 杨">
+    </span>
 
     
-    
-      <div class="tag-cloud">
-        <div class="tag-cloud-title">
-            目前共计 4 个标签
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Android-用Intent在活动之间传递数据的三种方法
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-14T17:16:18+08:00">
+                2017-05-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Android/" itemprop="url" rel="index">
+                    <span itemprop="name">Android</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">阅读量
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
         </div>
-        <div class="tag-cloud-tags">
-          <a href="/tags/Android/" style="font-size: 30px; color: #111">Android</a> <a href="/tags/android/" style="font-size: 12px; color: #ccc">android</a> <a href="/tags/hadoop/" style="font-size: 12px; color: #ccc">hadoop</a> <a href="/tags/linux/" style="font-size: 30px; color: #111">linux</a>
-        </div>
-      </div>
+      </header>
     
+
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="Intent"><a href="#Intent" class="headerlink" title="Intent"></a>Intent</h3><blockquote>
+<p>intent n. 意图；目的；</p>
+</blockquote>
+<p>Intent最常见的用法是启动活动、服务等，实现Activity间跳转。</p>
+<p>那么问题来了，在跳转的时候，怎样给下一个Activity捎一些数据呢？</p>
+<h3 id="三种方法"><a href="#三种方法" class="headerlink" title="三种方法"></a>三种方法</h3><ul>
+<li>putExtra</li>
+<li>serializable</li>
+<li>parcelable</li>
+</ul>
+<h3 id="putExtra"><a href="#putExtra" class="headerlink" title="- putExtra()"></a>- putExtra()</h3><p>Intent类提供了putExtra()方法，可以向intent对象添加一些常见类型的附加数据。只要在startActivity之前调用即可。</p>
+<pre><code>intent.putExtra(&quot;string_data&quot;,&quot;hello&quot;);
+</code></pre><p>然后在另一边用getStringExtra()接收：</p>
+<pre><code>getIntent.getStringExtra(&quot;string_data&quot;);
+</code></pre><p>这种方法很简单，简单到只能传基本数据类型的数据，要传自定义的对象就无能为力了。</p>
+<h3 id="serializable"><a href="#serializable" class="headerlink" title="- serializable"></a>- serializable</h3><p>这是一个接口，serializable即序列化，能将对象转化成可以直接传输的数据，<strong><strong>可以理解为</strong></strong>将对象简单粗暴的用一串二进制表示，然后就可传输了。</p>
+<p>用法非常简单，只要在要传输的类定义里面实现Serializable接口。</p>
+<pre><code>public class Article implements Serializable{ …… }
+</code></pre><p>putExtra()跟上面的方法一样，只是把put的对象换成自定义的对象了</p>
+<pre><code>intent.putExtra(&quot;article&quot;,article);
+</code></pre><p>再到下一个Activity取出传过来的序列化对象，就完成了。</p>
+<pre><code>article = (Article) getIntent.getSerializbleExtra(&quot;article&quot;);
+</code></pre><p>是不是超级简单粗暴！</p>
+<p>但由于是直接传递整个对象，不可避免的会降低效率，尤其是传递体量较大的对象时。这个时候推荐用parcelable方法来实现。</p>
+<h3 id="parcelable"><a href="#parcelable" class="headerlink" title="- parcelable"></a>- parcelable</h3><p>parcelable即包裹化，原理是先将对象拆开，再把真正有用的数据打包带走。</p>
+<p>相比序列化的方法，parcelable实现了精准传递，很多时候我只需要对象的某些数据，并不是所有数据。也因为这种机制，这种方式实现起来较为复杂（拆开和打包需要自己动手）。</p>
+<h4 id="1-实现接口"><a href="#1-实现接口" class="headerlink" title="1. 实现接口"></a>1. 实现接口</h4><pre><code>public class Article implements Parcelable{
+private int id;
+private String title;
+private String author;
+private String content;
+private String time;
+private String last_time;
+</code></pre><h4 id="2-先看看源码（Parcelable-java）"><a href="#2-先看看源码（Parcelable-java）" class="headerlink" title="2. 先看看源码（Parcelable.java）"></a>2. 先看看源码（Parcelable.java）</h4><pre><code>public interface Parcelable {
+
+    public static final int PARCELABLE_WRITE_RETURN_VALUE = 0x0001;
+
+    public static final int PARCELABLE_ELIDE_DUPLICATES = 0x0002;
+
+    public static final int CONTENTS_FILE_DESCRIPTOR = 0x0001;
+
+    public int describeContents();
+
+    public void writeToParcel(Parcel dest, int flags);
+
+    public interface Creator&lt;T&gt; {        
+        public T createFromParcel(Parcel source);
+        public T[] newArray(int size);
+    }
+
+    public interface ClassLoaderCreator&lt;T&gt; extends Creator&lt;T&gt; {
+        public T createFromParcel(Parcel source, ClassLoader loader);
+    }
+}
+</code></pre><p>这里只需要重写describeContents、writeToParcel和Creator</p>
+<h4 id="3-重写describeContents"><a href="#3-重写describeContents" class="headerlink" title="3. 重写describeContents"></a>3. 重写describeContents</h4><p>通常，这里什么都不用做，直接返回0.</p>
+<pre><code>@Override
+public int describeContents(){
+    return 0;
+}
+</code></pre><h4 id="4-重写writeToParcel"><a href="#4-重写writeToParcel" class="headerlink" title="4. 重写writeToParcel"></a>4. 重写writeToParcel</h4><p>通过writeXXX()方法写出对象的属性。XXX可以是各种受支持的数据类型。</p>
+<pre><code>@Override
+public void writeToParcel(Parcel dest, int flag){
+    dest.writeInt(id);
+    dest.writeString(title);
+    dest.writeString(author);
+    dest.writeString(content);
+    dest.writeString(time);
+    dest.writeString(last_time);
+}
+</code></pre><h4 id="5-Creator"><a href="#5-Creator" class="headerlink" title="5. Creator"></a>5. Creator</h4><p>从源码可以看出，public interface Creator<t> 是一个泛型接口，里面需要重写两个方法。</t></p>
+<p>createFromParcel方法将打包的数据读取，重新封装成泛型指示的对象。</p>
+<p>newArray方法返回一个对象数组。</p>
+<pre><code>public static final Parcelable.Creator&lt;Article&gt; CREATOR = new Creator&lt;Article&gt;(){
+    @Override
+    public Article createFromParcel(Parcel source){
+        Article article = new Article();
+        article.setId(source.readInt());
+        article.setTitle(source.readString());
+        article.setAuthor(source.readString());
+        article.setContent(source.readString());
+        article.setTime(source.readString());
+        article.setLast_time(source.readString());
+        return article;
+    }
+
+    @Override
+    public Article[] newArray(int size){
+        return new Article[size];
+    }
+};
+</code></pre><p>注意这里读取数据的顺序应该和上一步写数据的<strong><strong>顺序一样</strong></strong>。</p>
+<h4 id="6-在下一个活动中接收数据"><a href="#6-在下一个活动中接收数据" class="headerlink" title="6. 在下一个活动中接收数据"></a>6. 在下一个活动中接收数据</h4><p>接受数据和前两种方法相差无几。用的是getParcelableExtra()方法。</p>
+<hr>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>三种传数据的方法的思路都是一样的，都是A把数据put给intent，B从intent里面读取。不同的是实现的细节，第一种只能put一些基本数据类型，后两种方法进行了扩展，可以支持自定义类型。其中serializable直接将序列化后的对象传递，parcelable将对象的属性写入包裹，再从包裹重建对象，比前者效率高，但实现起来比前者复杂。</p>
+<hr>
+<blockquote>
+<p>附：Intent putExtra支持的所有类型</p>
+</blockquote>
+<pre><code>Intent     putExtra(String name, String[] value)
+Intent     putExtra(String name, long value)
+Intent     putExtra(String name, boolean value)
+Intent     putExtra(String name, double value)
+Intent     putExtra(String name, Parcelable[] value)
+Intent     putExtra(String name, char value)
+Intent     putExtra(String name, int[] value)
+Intent     putExtra(String name, int value)
+Intent     putExtra(String name, double[] value)                   
+Intent     putExtra(String name, short value)                         
+Intent     putExtra(String name, long[] value)                         
+Intent     putExtra(String name, boolean[] value)                         
+Intent     putExtra(String name, short[] value)                         
+Intent     putExtra(String name, String value)                         
+Intent     putExtra(String name, float[] value)                         
+Intent     putExtra(String name, Bundle value)                         
+Intent     putExtra(String name, byte[] value)                         
+Intent     putExtra(String name, CharSequence value)                         
+Intent     putExtra(String name, char[] value)                         
+Intent     putExtra(String name, byte value)                         
+Intent     putExtras(Intent src)                         
+Intent     putExtras(Bundle extras)
+Intent     putExtra(String name, Serializable value)                         
+Intent     putExtra(String name, Parcelable value)
+</code></pre>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/uploads/wechat.png" alt="YangSheng WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/uploads/alipay.png" alt="YangSheng Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Android/" rel="tag"># Android</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/05/13/Android-RecyclerView通过addOnItemTouchListener处理onClick点击事件/" rel="next" title="Android-RecyclerView通过addOnItemTouchListener处理onClick点击事件">
+                <i class="fa fa-chevron-left"></i> Android-RecyclerView通过addOnItemTouchListener处理onClick点击事件
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
   </div>
 
 
@@ -363,8 +668,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/the.jpg"
@@ -446,6 +760,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Intent"><span class="nav-number">1.</span> <span class="nav-text">Intent</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三种方法"><span class="nav-number">2.</span> <span class="nav-text">三种方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#putExtra"><span class="nav-number">3.</span> <span class="nav-text">- putExtra()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#serializable"><span class="nav-number">4.</span> <span class="nav-text">- serializable</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#parcelable"><span class="nav-number">5.</span> <span class="nav-text">- parcelable</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-实现接口"><span class="nav-number">5.1.</span> <span class="nav-text">1. 实现接口</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-先看看源码（Parcelable-java）"><span class="nav-number">5.2.</span> <span class="nav-text">2. 先看看源码（Parcelable.java）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-重写describeContents"><span class="nav-number">5.3.</span> <span class="nav-text">3. 重写describeContents</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-重写writeToParcel"><span class="nav-number">5.4.</span> <span class="nav-text">4. 重写writeToParcel</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-Creator"><span class="nav-number">5.5.</span> <span class="nav-text">5. Creator</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-在下一个活动中接收数据"><span class="nav-number">5.6.</span> <span class="nav-text">6. 在下一个活动中接收数据</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">6.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -573,6 +903,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
 
   
 
