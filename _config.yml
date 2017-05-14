@@ -12,7 +12,7 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://ss-yang.github.io
+url: http://syang.site
 root: /
 permalink: :year/:month/:day/:title/ #永久链接的格式
 permalink_defaults:  #永久链接中各部分的默认值
