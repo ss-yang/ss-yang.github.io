@@ -90,7 +90,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Android," />
 
 
 
@@ -106,16 +106,19 @@
 
 
 
-<meta name="description" content="Never give in, never give up.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="文章分类">
-<meta property="og:url" content="http://syang.site/categories/index.html">
+<meta name="description" content="TextView本身不支持onClick事件，不过借助ClickableSpan类的onClick和SpannableString类可以很方便地实现跳转： TextView login_quit = (TextView)headerView.findViewById(R.id.tv_login_quit); String login = &amp;quot;登陆&amp;quot;; SpannableStrin">
+<meta name="keywords" content="Android">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android 让TextView的文字支持点击跳转（类似超链接）">
+<meta property="og:url" content="http://syang.site/2017/05/16/Android-让TextView的文字支持点击跳转（类似超链接）/index.html">
 <meta property="og:site_name" content="木 杨">
-<meta property="og:description" content="Never give in, never give up.">
-<meta property="og:updated_time" content="2017-05-13T08:41:31.711Z">
+<meta property="og:description" content="TextView本身不支持onClick事件，不过借助ClickableSpan类的onClick和SpannableString类可以很方便地实现跳转： TextView login_quit = (TextView)headerView.findViewById(R.id.tv_login_quit); String login = &amp;quot;登陆&amp;quot;; SpannableStrin">
+<meta property="og:image" content="http://syang.site/2017/05/16/Android-让TextView的文字支持点击跳转（类似超链接）/2017-05-16-Android-让TextView的文字支持点击跳转（类似超链接）/headerView.png">
+<meta property="og:updated_time" content="2017-05-16T10:15:15.476Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="文章分类">
-<meta name="twitter:description" content="Never give in, never give up.">
+<meta name="twitter:title" content="Android 让TextView的文字支持点击跳转（类似超链接）">
+<meta name="twitter:description" content="TextView本身不支持onClick事件，不过借助ClickableSpan类的onClick和SpannableString类可以很方便地实现跳转： TextView login_quit = (TextView)headerView.findViewById(R.id.tv_login_quit); String login = &amp;quot;登陆&amp;quot;; SpannableStrin">
+<meta name="twitter:image" content="http://syang.site/2017/05/16/Android-让TextView的文字支持点击跳转（类似超链接）/2017-05-16-Android-让TextView的文字支持点击跳转（类似超链接）/headerView.png">
 
 
 
@@ -143,13 +146,13 @@
 
 
 
-  <link rel="canonical" href="http://syang.site/categories/"/>
+  <link rel="canonical" href="http://syang.site/2017/05/16/Android-让TextView的文字支持点击跳转（类似超链接）/"/>
 
 
 
 
 
-  <title>文章分类 | 木 杨</title>
+  <title>Android 让TextView的文字支持点击跳转（类似超链接） | 木 杨</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -174,7 +177,7 @@
     
   
 
-  <div class="container sidebar-position-right  ">
+  <div class="container sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -313,25 +316,226 @@
             
 
   <div id="posts" class="posts-expand">
-  <header class="post-header">
+    
 
-	<h1 class="post-title" itemprop="name headline">文章分类</h1>
+  
 
+  
+  
+  
 
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://syang.site/2017/05/16/Android-让TextView的文字支持点击跳转（类似超链接）/">
 
-</header>
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="YangSheng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/the.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="木 杨">
+    </span>
 
     
-    
-      <div class="category-all-page">
-        <div class="category-all-title">
-            目前共计 2 个分类
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Android 让TextView的文字支持点击跳转（类似超链接）
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-16T18:13:48+08:00">
+                2017-05-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Android/" itemprop="url" rel="index">
+                    <span itemprop="name">Android</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">阅读量
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
         </div>
-        <div class="category-all">
-          <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Android/">Android</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/linux/">linux</a><span class="category-list-count">2</span></li></ul>
-        </div>
-      </div>
+      </header>
     
+
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>TextView本身不支持onClick事件，不过借助ClickableSpan类的onClick和SpannableString类可以很方便地实现跳转：</p>
+<pre><code>TextView login_quit = (TextView)headerView.findViewById(R.id.tv_login_quit);
+String login = &quot;登陆&quot;;
+SpannableString spannableString=new SpannableString(login);
+spannableString.setSpan(new ClickableSpan() {
+    @Override
+    public void onClick(View view) {
+        Intent intent=new Intent(MainActivity.this,LoginActivity.class);
+        startActivity(intent);
+    }
+}, 0, login.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+login_quit.setText(spannableString);
+login_quit.setMovementMethod(LinkMovementMethod.getInstance());
+</code></pre><p>这样就可以实现点击文字跳转的功能了。</p>
+<p>附上setSpan函数的原型，理解各个参数：</p>
+<pre><code>public void setSpan(Object what, int start, int end, int flags) {
+    super.setSpan(what, start, end, flags);
+}
+</code></pre><p>效果：</p>
+<p><img src="2017-05-16-Android-让TextView的文字支持点击跳转（类似超链接）/headerView.png" alt="效果图"></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/uploads/wechat.png" alt="YangSheng WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/uploads/alipay.png" alt="YangSheng Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Android/" rel="tag"># Android</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/05/16/Android-Material-Design-获取NavigationView的headerView的方法/" rel="next" title="Android Material Design 获取NavigationView的headerView的方法">
+                <i class="fa fa-chevron-left"></i> Android Material Design 获取NavigationView的headerView的方法
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
   </div>
 
 
@@ -573,6 +777,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
 
   
 
