@@ -32,4 +32,4 @@ TextView本身不支持onClick事件，不过借助ClickableSpan类的onClick和
 
 效果：
 
-![效果图](2017-05-16-Android-让TextView的文字支持点击跳转（类似超链接）/headerView.png)
+![效果图](headerView.png)
