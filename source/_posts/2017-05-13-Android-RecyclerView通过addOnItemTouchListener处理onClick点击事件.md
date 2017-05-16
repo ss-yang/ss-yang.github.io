@@ -2,9 +2,9 @@
 title: Android-RecyclerView通过addOnItemTouchListener处理onClick点击事件
 date: 2017-05-13 14:30:54
 tags: 
-- android
+- Android
 categories:
-- android
+- Android
 ---
 
 ### 原因
