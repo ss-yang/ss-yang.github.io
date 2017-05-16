@@ -90,7 +90,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Android,MaterialDesign," />
 
 
 
@@ -106,15 +106,19 @@
 
 
 
-<meta name="description" content="Never give in, never give up.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="木 杨">
-<meta property="og:url" content="http://syang.site/archives/2017/index.html">
+<meta name="description" content="headerView  NavigationView的headerView通常用来放用户信息。   找不到headerView的原因  今天在这里实现点击“登陆”跳转功能的时候踩了个小坑，一直闪退，debug后才发现在这一句出问题（原来一直怀疑是ClickableSpan的问题，从一开始就走错了方向，耗了不少时间）： TextView login = (TextView)findViewById">
+<meta name="keywords" content="Android,MaterialDesign">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android Material Design 获取NavigationView的headerView的方法">
+<meta property="og:url" content="http://syang.site/2017/05/16/Android-Material-Design-获取NavigationView的headerView的方法/index.html">
 <meta property="og:site_name" content="木 杨">
-<meta property="og:description" content="Never give in, never give up.">
+<meta property="og:description" content="headerView  NavigationView的headerView通常用来放用户信息。   找不到headerView的原因  今天在这里实现点击“登陆”跳转功能的时候踩了个小坑，一直闪退，debug后才发现在这一句出问题（原来一直怀疑是ClickableSpan的问题，从一开始就走错了方向，耗了不少时间）： TextView login = (TextView)findViewById">
+<meta property="og:image" content="http://syang.site/2017/05/16/Android-Material-Design-获取NavigationView的headerView的方法/2017-05-16-Android-Material-Design-获取NavigationView的headerView的方法/headerView.png">
+<meta property="og:updated_time" content="2017-05-16T10:03:00.299Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="木 杨">
-<meta name="twitter:description" content="Never give in, never give up.">
+<meta name="twitter:title" content="Android Material Design 获取NavigationView的headerView的方法">
+<meta name="twitter:description" content="headerView  NavigationView的headerView通常用来放用户信息。   找不到headerView的原因  今天在这里实现点击“登陆”跳转功能的时候踩了个小坑，一直闪退，debug后才发现在这一句出问题（原来一直怀疑是ClickableSpan的问题，从一开始就走错了方向，耗了不少时间）： TextView login = (TextView)findViewById">
+<meta name="twitter:image" content="http://syang.site/2017/05/16/Android-Material-Design-获取NavigationView的headerView的方法/2017-05-16-Android-Material-Design-获取NavigationView的headerView的方法/headerView.png">
 
 
 
@@ -142,13 +146,13 @@
 
 
 
-  <link rel="canonical" href="http://syang.site/archives/2017/"/>
+  <link rel="canonical" href="http://syang.site/2017/05/16/Android-Material-Design-获取NavigationView的headerView的方法/"/>
 
 
 
 
 
-  <title>足迹 | 木 杨</title>
+  <title>Android Material Design 获取NavigationView的headerView的方法 | 木 杨</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -173,7 +177,7 @@
     
   
 
-  <div class="container sidebar-position-right  page-archive  ">
+  <div class="container sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -311,251 +315,240 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
-
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      嗯..! 目前共计 6 篇日志。 继续努力。
-    </span>
-
+  <div id="posts" class="posts-expand">
     
-
-      
-      
-      
-
-      
-        
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
-        </div>
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/05/16/Android-Material-Design-获取NavigationView的headerView的方法/" itemprop="url">
-              
-                <span itemprop="name">Android Material Design 获取NavigationView的headerView的方法</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-05-16T18:00:27+08:00"
-              content="2017-05-16" >
-          05-16
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/05/14/Android-用Intent在活动之间传递数据的三种方法/" itemprop="url">
-              
-                <span itemprop="name">Android-用Intent在活动之间传递数据的三种方法</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-05-14T17:16:18+08:00"
-              content="2017-05-14" >
-          05-14
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/05/13/Android-RecyclerView通过addOnItemTouchListener处理onClick点击事件/" itemprop="url">
-              
-                <span itemprop="name">Android-RecyclerView通过addOnItemTouchListener处理onClick点击事件</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-05-13T14:30:54+08:00"
-              content="2017-05-13" >
-          05-13
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/05/11/Hadoop-CentOS7虚拟机中搭建Hadoop集群（一）/" itemprop="url">
-              
-                <span itemprop="name">Hadoop - CentOS7虚拟机中搭建Hadoop集群（一）</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-05-11T21:39:16+08:00"
-              content="2017-05-11" >
-          05-11
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/05/02/Android-ToolBar-searchView-实现搜索框/" itemprop="url">
-              
-                <span itemprop="name">Android - ToolBar searchView 实现搜索框</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-05-02T19:48:11+08:00"
-              content="2017-05-02" >
-          05-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/04/30/centos7-创建应用程序快捷启动器的方法/" itemprop="url">
-              
-                <span itemprop="name">centos7 创建应用程序快捷启动器的方法</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-04-30T10:00:27+08:00"
-              content="2017-04-30" >
-          04-30
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-  </section>
 
   
 
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://syang.site/2017/05/16/Android-Material-Design-获取NavigationView的headerView的方法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="YangSheng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/the.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="木 杨">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Android Material Design 获取NavigationView的headerView的方法
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-16T18:00:27+08:00">
+                2017-05-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Android/" itemprop="url" rel="index">
+                    <span itemprop="name">Android</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">阅读量
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <ul>
+<li><h3 id="headerView"><a href="#headerView" class="headerlink" title="headerView"></a>headerView</h3></li>
+</ul>
+<p>NavigationView的headerView通常用来放用户信息。</p>
+<p><img src="2017-05-16-Android-Material-Design-获取NavigationView的headerView的方法/headerView.png" alt="用户信息"></p>
+<ul>
+<li><h3 id="找不到headerView的原因"><a href="#找不到headerView的原因" class="headerlink" title="找不到headerView的原因"></a>找不到headerView的原因</h3></li>
+</ul>
+<p>今天在这里实现点击“登陆”跳转功能的时候踩了个小坑，一直闪退，debug后才发现在这一句出问题（原来一直怀疑是ClickableSpan的问题，从一开始就走错了方向，耗了不少时间）：</p>
+<pre><code>TextView login = (TextView)findViewById(R.id.tv_login_quit);
+</code></pre><p>这里login的值为null，终于找到<strong><strong>原因</strong></strong>：findViewById找不到布局文件里面的TextView控件。</p>
+<p>仔细看就发现headerView是一个子布局，父布局是NavigationView，那么问题就解决了！</p>
+<ul>
+<li><h3 id="获取headerView的正确姿势"><a href="#获取headerView的正确姿势" class="headerlink" title="获取headerView的正确姿势"></a>获取headerView的<strong><strong>正确姿势</strong></strong></h3><ul>
+<li><p>先<strong><strong>获取到NavigationView</strong></strong></p>
+<pre><code>NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+</code></pre></li>
+<li><p>再通过NavigationView获取headerView</p>
+<pre><code>View headerView = navigationView.getHeaderView(0);
+</code></pre></li>
+</ul>
+</li>
+</ul>
+<pre><code>    其中getHeaderView(int index) 传入0就可一，index是nav中header的序号，一般只有一个header.
+
+- 最后，通过headerView获取headerView里面的控件
+
+        TextView login = (TextView)headerView.findViewById(R.id.tv_login_quit);
+
+    注意是****headerView.findViewById****
+</code></pre>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/uploads/wechat.png" alt="YangSheng WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/uploads/alipay.png" alt="YangSheng Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Android/" rel="tag"># Android</a>
+          
+            <a href="/tags/MaterialDesign/" rel="tag"># MaterialDesign</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/05/14/Android-用Intent在活动之间传递数据的三种方法/" rel="next" title="Android-用Intent在活动之间传递数据的三种方法">
+                <i class="fa fa-chevron-left"></i> Android-用Intent在活动之间传递数据的三种方法
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
 
 
           </div>
@@ -563,6 +556,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -582,8 +579,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/the.jpg"
@@ -665,6 +671,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#headerView"><span class="nav-number">1.</span> <span class="nav-text">headerView</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#找不到headerView的原因"><span class="nav-number">2.</span> <span class="nav-text">找不到headerView的原因</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#获取headerView的正确姿势"><span class="nav-number">3.</span> <span class="nav-text">获取headerView的正确姿势</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -792,11 +814,9 @@
   
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
 
 
   
@@ -1164,26 +1184,6 @@
   
 
   
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 
