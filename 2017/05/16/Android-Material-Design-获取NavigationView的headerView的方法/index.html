@@ -106,19 +106,19 @@
 
 
 
-<meta name="description" content="headerView  NavigationView的headerView通常用来放用户信息。   找不到headerView的原因   今天在这里实现点击“登陆”跳转功能的时候踩了个小坑，一直闪退，debug后才发现在这一句出问题（原来一直怀疑是ClickableSpan的问题，从一开始就走错了方向，耗了不少时间）： TextView login = (TextView)findViewByI">
+<meta name="description" content="headerView  NavigationView的headerView通常用来放用户信息。   找不到headerView的原因  今天在这里实现点击“登陆”跳转功能的时候踩了个小坑，一直闪退，debug后才发现在这一句出问题（原来一直怀疑是ClickableSpan的问题，从一开始就走错了方向，耗了不少时间）： TextView login = (TextView)findViewById">
 <meta name="keywords" content="Android,MaterialDesign">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Android Material Design 获取NavigationView的headerView的方法">
 <meta property="og:url" content="http://syang.site/2017/05/16/Android-Material-Design-获取NavigationView的headerView的方法/index.html">
 <meta property="og:site_name" content="木 杨">
-<meta property="og:description" content="headerView  NavigationView的headerView通常用来放用户信息。   找不到headerView的原因   今天在这里实现点击“登陆”跳转功能的时候踩了个小坑，一直闪退，debug后才发现在这一句出问题（原来一直怀疑是ClickableSpan的问题，从一开始就走错了方向，耗了不少时间）： TextView login = (TextView)findViewByI">
-<meta property="og:image" content="http://syang.site/2017/05/16/Android-Material-Design-获取NavigationView的headerView的方法/2017-05-16-Android-Material-Design-获取NavigationView的headerView的方法/headerView.png">
-<meta property="og:updated_time" content="2017-05-16T10:18:01.127Z">
+<meta property="og:description" content="headerView  NavigationView的headerView通常用来放用户信息。   找不到headerView的原因  今天在这里实现点击“登陆”跳转功能的时候踩了个小坑，一直闪退，debug后才发现在这一句出问题（原来一直怀疑是ClickableSpan的问题，从一开始就走错了方向，耗了不少时间）： TextView login = (TextView)findViewById">
+<meta property="og:image" content="http://syang.site/2017/05/16/Android-Material-Design-获取NavigationView的headerView的方法/headerView.png">
+<meta property="og:updated_time" content="2017-05-16T10:24:16.492Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android Material Design 获取NavigationView的headerView的方法">
-<meta name="twitter:description" content="headerView  NavigationView的headerView通常用来放用户信息。   找不到headerView的原因   今天在这里实现点击“登陆”跳转功能的时候踩了个小坑，一直闪退，debug后才发现在这一句出问题（原来一直怀疑是ClickableSpan的问题，从一开始就走错了方向，耗了不少时间）： TextView login = (TextView)findViewByI">
-<meta name="twitter:image" content="http://syang.site/2017/05/16/Android-Material-Design-获取NavigationView的headerView的方法/2017-05-16-Android-Material-Design-获取NavigationView的headerView的方法/headerView.png">
+<meta name="twitter:description" content="headerView  NavigationView的headerView通常用来放用户信息。   找不到headerView的原因  今天在这里实现点击“登陆”跳转功能的时候踩了个小坑，一直闪退，debug后才发现在这一句出问题（原来一直怀疑是ClickableSpan的问题，从一开始就走错了方向，耗了不少时间）： TextView login = (TextView)findViewById">
+<meta name="twitter:image" content="http://syang.site/2017/05/16/Android-Material-Design-获取NavigationView的headerView的方法/headerView.png">
 
 
 
@@ -427,12 +427,11 @@
 <li><h3 id="headerView"><a href="#headerView" class="headerlink" title="headerView"></a>headerView</h3></li>
 </ul>
 <p>NavigationView的headerView通常用来放用户信息。</p>
-<p><img src="2017-05-16-Android-Material-Design-获取NavigationView的headerView的方法/headerView.png" alt="用户信息"></p>
+<p><img src="headerView.png" alt="用户信息"></p>
 <ul>
 <li><h3 id="找不到headerView的原因"><a href="#找不到headerView的原因" class="headerlink" title="找不到headerView的原因"></a>找不到headerView的原因</h3></li>
 </ul>
-<p><img src="" alt="让TextView的文字支持点击跳转（类似超链接）"></p>
-<p>今天在这里实现点击“登陆”跳转功能的时候踩了个小坑，一直闪退，debug后才发现在这一句出问题（原来一直怀疑是ClickableSpan的问题，从一开始就走错了方向，耗了不少时间）：</p>
+<p>今天在这里实现<a href="http://syang.site/2017/05/16/Android-%E8%AE%A9TextView%E7%9A%84%E6%96%87%E5%AD%97%E6%94%AF%E6%8C%81%E7%82%B9%E5%87%BB%E8%B7%B3%E8%BD%AC%EF%BC%88%E7%B1%BB%E4%BC%BC%E8%B6%85%E9%93%BE%E6%8E%A5%EF%BC%89/">点击“登陆”跳转功能</a>的时候踩了个小坑，一直闪退，debug后才发现在这一句出问题（原来一直怀疑是ClickableSpan的问题，从一开始就走错了方向，耗了不少时间）：</p>
 <pre><code>TextView login = (TextView)findViewById(R.id.tv_login_quit);
 </code></pre><p>这里login的值为null，终于找到<strong><strong>原因</strong></strong>：findViewById找不到布局文件里面的TextView控件。</p>
 <p>仔细看就发现headerView是一个子布局，父布局是NavigationView，那么问题就解决了！</p>
