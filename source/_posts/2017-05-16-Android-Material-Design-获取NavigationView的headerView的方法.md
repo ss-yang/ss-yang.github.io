@@ -17,6 +17,8 @@ NavigationView的headerView通常用来放用户信息。
 
 - ### 找不到headerView的原因
 
+![让TextView的文字支持点击跳转（类似超链接）]()
+
 今天在这里实现点击“登陆”跳转功能的时候踩了个小坑，一直闪退，debug后才发现在这一句出问题（原来一直怀疑是ClickableSpan的问题，从一开始就走错了方向，耗了不少时间）：
 
     TextView login = (TextView)findViewById(R.id.tv_login_quit);
