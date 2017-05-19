@@ -106,17 +106,17 @@
 
 
 
-<meta name="description" content="Hadoop - CentOS7搭建Hadoop集群（一） 3. 在master上安装Hadoop 用putty、SecureCRT、XShell等工具把hadoop2.7.3.tar.gz（从windows）上传到master上，然后解压到用户目录里。 打开 /home/hadoop/hadoop2.7.3/etc/hadoop/目录，修改hadoop的配置文件：  hadoop-env.sh">
+<meta name="description" content="Hadoop - CentOS7搭建Hadoop集群（一） 3. 在master上安装Hadoop 用putty、SecureCRT、XShell等工具把hadoop2.7.3.tar.gz（从windows）上传到master上，然后解压到用户目录里。  打开 /home/hadoop/hadoop2.7.3/etc/hadoop/目录，修改hadoop的配置文件：  hadoop-env.sh">
 <meta name="keywords" content="hadoop,大数据,linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hadoop - CentOS7搭建Hadoop集群（二）">
 <meta property="og:url" content="http://syang.site/2017/05/12/Hadoop-CentOS7搭建Hadoop集群（二）/index.html">
 <meta property="og:site_name" content="木 杨">
-<meta property="og:description" content="Hadoop - CentOS7搭建Hadoop集群（一） 3. 在master上安装Hadoop 用putty、SecureCRT、XShell等工具把hadoop2.7.3.tar.gz（从windows）上传到master上，然后解压到用户目录里。 打开 /home/hadoop/hadoop2.7.3/etc/hadoop/目录，修改hadoop的配置文件：  hadoop-env.sh">
-<meta property="og:updated_time" content="2017-05-19T03:15:09.039Z">
+<meta property="og:description" content="Hadoop - CentOS7搭建Hadoop集群（一） 3. 在master上安装Hadoop 用putty、SecureCRT、XShell等工具把hadoop2.7.3.tar.gz（从windows）上传到master上，然后解压到用户目录里。  打开 /home/hadoop/hadoop2.7.3/etc/hadoop/目录，修改hadoop的配置文件：  hadoop-env.sh">
+<meta property="og:updated_time" content="2017-05-19T03:46:24.515Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hadoop - CentOS7搭建Hadoop集群（二）">
-<meta name="twitter:description" content="Hadoop - CentOS7搭建Hadoop集群（一） 3. 在master上安装Hadoop 用putty、SecureCRT、XShell等工具把hadoop2.7.3.tar.gz（从windows）上传到master上，然后解压到用户目录里。 打开 /home/hadoop/hadoop2.7.3/etc/hadoop/目录，修改hadoop的配置文件：  hadoop-env.sh">
+<meta name="twitter:description" content="Hadoop - CentOS7搭建Hadoop集群（一） 3. 在master上安装Hadoop 用putty、SecureCRT、XShell等工具把hadoop2.7.3.tar.gz（从windows）上传到master上，然后解压到用户目录里。  打开 /home/hadoop/hadoop2.7.3/etc/hadoop/目录，修改hadoop的配置文件：  hadoop-env.sh">
 
 
 
@@ -421,9 +421,10 @@
       
 
       
-        <p><a href="">Hadoop - CentOS7搭建Hadoop集群（一）</a></p>
+        <p><a href="http://syang.site/2017/05/11/Hadoop-CentOS7%E6%90%AD%E5%BB%BAHadoop%E9%9B%86%E7%BE%A4%EF%BC%88%E4%B8%80%EF%BC%89/">Hadoop - CentOS7搭建Hadoop集群（一）</a></p>
 <h2 id="3-在master上安装Hadoop"><a href="#3-在master上安装Hadoop" class="headerlink" title="3. 在master上安装Hadoop"></a>3. 在master上安装Hadoop</h2><ol>
-<li>用putty、SecureCRT、XShell等工具把hadoop2.7.3.tar.gz（从windows）上传到master上，然后解压到用户目录里。</li>
+<li><p>用putty、SecureCRT、XShell等工具把hadoop2.7.3.tar.gz（从windows）上传到master上，然后解压到用户目录里。</p>
+</li>
 <li><p>打开 /home/hadoop/hadoop2.7.3/etc/hadoop/目录，修改hadoop的配置文件：</p>
 <ul>
 <li><p>hadoop-env.sh</p>
@@ -455,41 +456,36 @@
     &lt;/property&gt;
 &lt;/configuration&gt;
 </code></pre></li>
-<li><p>mapred-site.xml.template</p>
-<p>  需要重命名： </p>
-<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mv mapred-site.xml.template mapred-site.xml</div></pre></td></tr></table></figure>
+<li><p>mapred-site.xml.template 需要重命名： </p>
+<pre><code>mv mapred-site.xml.template mapred-site.xml
+&lt;configuration&gt;
+    &lt;!-- 通知框架 MR 使用 YARN --&gt;
+    &lt;property&gt;
+        &lt;name&gt;mapreduce.framework.name&lt;/name&gt;
+        &lt;value&gt;yarn&lt;/value&gt;
+    &lt;/property&gt;
+&lt;/configuration&gt;
+</code></pre></li>
+<li><p>yarn-site.xml</p>
+<pre><code>&lt;property&gt;
+    &lt;name&gt;yarn.resourcemanager.hostname&lt;/name&gt;
+    &lt;value&gt;yang&lt;/value&gt;
+&lt;/property&gt;
+&lt;property&gt;
+    &lt;name&gt;yarn.nodemanager.aux-services&lt;/name&gt;
+    &lt;value&gt;mapreduce_shuffle&lt;/value&gt;
+&lt;/property&gt;
+&lt;property&gt;
+    &lt;name&gt;yarn.log-aggregation-enable&lt;/name&gt;
+    &lt;value&gt;true&lt;/value&gt;
+&lt;/property&gt;
+&lt;property&gt;
+    &lt;name&gt;yarn.log-aggregation.retain-seconds&lt;/name&gt;
+    &lt;value&gt;604800&lt;/value&gt;
+&lt;/property&gt;
 </code></pre></li>
 </ul>
 </li>
-</ol>
-<pre><code>        &lt;configuration&gt;
-            &lt;!-- 通知框架 MR 使用 YARN --&gt;
-            &lt;property&gt;
-                &lt;name&gt;mapreduce.framework.name&lt;/name&gt;
-                &lt;value&gt;yarn&lt;/value&gt;
-            &lt;/property&gt;
-        &lt;/configuration&gt;
-
-
-- yarn-site.xml
-
-        &lt;property&gt;
-            &lt;name&gt;yarn.resourcemanager.hostname&lt;/name&gt;
-            &lt;value&gt;yang&lt;/value&gt;
-        &lt;/property&gt;
-        &lt;property&gt;
-            &lt;name&gt;yarn.nodemanager.aux-services&lt;/name&gt;
-            &lt;value&gt;mapreduce_shuffle&lt;/value&gt;
-        &lt;/property&gt;
-        &lt;property&gt;
-            &lt;name&gt;yarn.log-aggregation-enable&lt;/name&gt;
-            &lt;value&gt;true&lt;/value&gt;
-        &lt;/property&gt;
-        &lt;property&gt;
-            &lt;name&gt;yarn.log-aggregation.retain-seconds&lt;/name&gt;
-            &lt;value&gt;604800&lt;/value&gt;
-        &lt;/property&gt;
-</code></pre><ol>
 <li><p>格式化</p>
 <pre><code>hdfs namenode -format
 </code></pre></li>
@@ -522,7 +518,7 @@ slave2
 <li>至此，安装全部完成。</li>
 </ol>
 <hr>
-<h2 id="4-需要注意的的一些坑"><a href="#4-需要注意的的一些坑" class="headerlink" title="4. 需要注意的的一些坑"></a>4. 需要注意的的一些坑</h2><ol>
+<h2 id="5-需要注意的的一些坑"><a href="#5-需要注意的的一些坑" class="headerlink" title="5. 需要注意的的一些坑"></a>5. 需要注意的的一些坑</h2><ol>
 <li>master和slave的hadoop建议统一安装在相同的目录下，事先做好规定很重要（确定安装目录，确定用户名，确定ip，确定主机名）。</li>
 <li>集群的每个节点都要用同名用户(hadoop)。</li>
 <li>确保hadoop2.7.3文件夹里面的所有文件的权限都属于hadoop用户，而不是root，否则访问某些文件没有权限导致格式化失败or系统启动失败。</li>
@@ -530,7 +526,7 @@ slave2
 <li>配置ssh免密码登陆的时候，authorized_keys的权限应该是“-rw——-”，否则master没有权限访问slave的这个文件，就不能免密登陆。</li>
 </ol>
 <hr>
-<p><a href="">Hadoop - CentOS7搭建Hadoop集群（一）</a></p>
+<p><a href="http://syang.site/2017/05/11/Hadoop-CentOS7%E6%90%AD%E5%BB%BAHadoop%E9%9B%86%E7%BE%A4%EF%BC%88%E4%B8%80%EF%BC%89/">Hadoop - CentOS7搭建Hadoop集群（一）</a></p>
 
       
     </div>
@@ -765,7 +761,7 @@ slave2
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-在master上安装Hadoop"><span class="nav-number">1.</span> <span class="nav-text">3. 在master上安装Hadoop</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-安装Hadoop集群"><span class="nav-number">2.</span> <span class="nav-text">4. 安装Hadoop集群</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-需要注意的的一些坑"><span class="nav-number">3.</span> <span class="nav-text">4. 需要注意的的一些坑</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-在master上安装Hadoop"><span class="nav-number">1.</span> <span class="nav-text">3. 在master上安装Hadoop</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-安装Hadoop集群"><span class="nav-number">2.</span> <span class="nav-text">4. 安装Hadoop集群</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-需要注意的的一些坑"><span class="nav-number">3.</span> <span class="nav-text">5. 需要注意的的一些坑</span></a></li></ol></div>
             
 
           </div>
