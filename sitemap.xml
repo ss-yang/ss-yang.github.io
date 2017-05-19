@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://syang.site/2017/05/12/Hadoop-CentOS7%E6%90%AD%E5%BB%BAHadoop%E9%9B%86%E7%BE%A4%EF%BC%88%E4%BA%8C%EF%BC%89/</loc>
+    
+    <lastmod>2017-05-19T03:15:09.039Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://syang.site/2017/05/11/Hadoop-CentOS7%E6%90%AD%E5%BB%BAHadoop%E9%9B%86%E7%BE%A4%EF%BC%88%E4%B8%80%EF%BC%89/</loc>
+    
+    <lastmod>2017-05-19T03:14:56.971Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://syang.site/2017/05/16/Android-Material-Design-%E8%8E%B7%E5%8F%96NavigationView%E7%9A%84headerView%E7%9A%84%E6%96%B9%E6%B3%95/</loc>
     
     <lastmod>2017-05-16T12:35:22.876Z</lastmod>
@@ -54,13 +68,6 @@
     <loc>http://syang.site/tags/index.html</loc>
     
     <lastmod>2017-05-13T08:40:39.389Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://syang.site/2017/05/11/Hadoop-CentOS7%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%AD%E6%90%AD%E5%BB%BAHadoop%E9%9B%86%E7%BE%A4%EF%BC%88%E4%B8%80%EF%BC%89/</loc>
-    
-    <lastmod>2017-05-11T15:07:26.003Z</lastmod>
     
   </url>
   

@@ -90,7 +90,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Android," />
+  <meta name="keywords" content="hadoop,大数据,linux," />
 
 
 
@@ -106,17 +106,17 @@
 
 
 
-<meta name="description" content="在ToolBar上可以很方便的用widget.SearchView实现搜索功能。一般情况下，SearchView通常有两种实现方案：  在当前Activity处理搜索逻辑   首先在menu中新增item  12345&amp;lt;item    android:id=&amp;quot;@+id/toolbar_search&amp;quot;    android:title=&amp;quot;Search&amp;quot;">
-<meta name="keywords" content="Android">
+<meta name="description" content="Hadoop - CentOS7搭建Hadoop集群（一） 3. 在master上安装Hadoop 用putty、SecureCRT、XShell等工具把hadoop2.7.3.tar.gz（从windows）上传到master上，然后解压到用户目录里。 打开 /home/hadoop/hadoop2.7.3/etc/hadoop/目录，修改hadoop的配置文件：  hadoop-env.sh">
+<meta name="keywords" content="hadoop,大数据,linux">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android - ToolBar searchView 实现搜索框">
-<meta property="og:url" content="http://syang.site/2017/05/02/Android-ToolBar-searchView-实现搜索框/index.html">
+<meta property="og:title" content="Hadoop - CentOS7搭建Hadoop集群（二）">
+<meta property="og:url" content="http://syang.site/2017/05/12/Hadoop-CentOS7搭建Hadoop集群（二）/index.html">
 <meta property="og:site_name" content="木 杨">
-<meta property="og:description" content="在ToolBar上可以很方便的用widget.SearchView实现搜索功能。一般情况下，SearchView通常有两种实现方案：  在当前Activity处理搜索逻辑   首先在menu中新增item  12345&amp;lt;item    android:id=&amp;quot;@+id/toolbar_search&amp;quot;    android:title=&amp;quot;Search&amp;quot;">
-<meta property="og:updated_time" content="2017-05-02T11:48:52.722Z">
+<meta property="og:description" content="Hadoop - CentOS7搭建Hadoop集群（一） 3. 在master上安装Hadoop 用putty、SecureCRT、XShell等工具把hadoop2.7.3.tar.gz（从windows）上传到master上，然后解压到用户目录里。 打开 /home/hadoop/hadoop2.7.3/etc/hadoop/目录，修改hadoop的配置文件：  hadoop-env.sh">
+<meta property="og:updated_time" content="2017-05-19T03:15:09.039Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Android - ToolBar searchView 实现搜索框">
-<meta name="twitter:description" content="在ToolBar上可以很方便的用widget.SearchView实现搜索功能。一般情况下，SearchView通常有两种实现方案：  在当前Activity处理搜索逻辑   首先在menu中新增item  12345&amp;lt;item    android:id=&amp;quot;@+id/toolbar_search&amp;quot;    android:title=&amp;quot;Search&amp;quot;">
+<meta name="twitter:title" content="Hadoop - CentOS7搭建Hadoop集群（二）">
+<meta name="twitter:description" content="Hadoop - CentOS7搭建Hadoop集群（一） 3. 在master上安装Hadoop 用putty、SecureCRT、XShell等工具把hadoop2.7.3.tar.gz（从windows）上传到master上，然后解压到用户目录里。 打开 /home/hadoop/hadoop2.7.3/etc/hadoop/目录，修改hadoop的配置文件：  hadoop-env.sh">
 
 
 
@@ -144,13 +144,13 @@
 
 
 
-  <link rel="canonical" href="http://syang.site/2017/05/02/Android-ToolBar-searchView-实现搜索框/"/>
+  <link rel="canonical" href="http://syang.site/2017/05/12/Hadoop-CentOS7搭建Hadoop集群（二）/"/>
 
 
 
 
 
-  <title>Android - ToolBar searchView 实现搜索框 | 木 杨</title>
+  <title>Hadoop - CentOS7搭建Hadoop集群（二） | 木 杨</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -323,7 +323,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://syang.site/2017/05/02/Android-ToolBar-searchView-实现搜索框/">
+    <link itemprop="mainEntityOfPage" href="http://syang.site/2017/05/12/Hadoop-CentOS7搭建Hadoop集群（二）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="YangSheng">
@@ -344,7 +344,7 @@
             
             
               
-                Android - ToolBar searchView 实现搜索框
+                Hadoop - CentOS7搭建Hadoop集群（二）
               
             
           </h1>
@@ -359,8 +359,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-02T19:48:11+08:00">
-                2017-05-02
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-12T11:12:10+08:00">
+                2017-05-12
               </time>
             
 
@@ -382,8 +382,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Android/" itemprop="url" rel="index">
-                    <span itemprop="name">Android</span>
+                  <a href="/categories/大数据/" itemprop="url" rel="index">
+                    <span itemprop="name">大数据</span>
                   </a>
                 </span>
 
@@ -421,37 +421,116 @@
       
 
       
-        <p>在ToolBar上可以很方便的用widget.SearchView实现搜索功能。<br>一般情况下，SearchView通常有两种实现方案：</p>
+        <p><a href="">Hadoop - CentOS7搭建Hadoop集群（一）</a></p>
+<h2 id="3-在master上安装Hadoop"><a href="#3-在master上安装Hadoop" class="headerlink" title="3. 在master上安装Hadoop"></a>3. 在master上安装Hadoop</h2><ol>
+<li>用putty、SecureCRT、XShell等工具把hadoop2.7.3.tar.gz（从windows）上传到master上，然后解压到用户目录里。</li>
+<li><p>打开 /home/hadoop/hadoop2.7.3/etc/hadoop/目录，修改hadoop的配置文件：</p>
 <ul>
-<li><h3 id="在当前Activity处理搜索逻辑"><a href="#在当前Activity处理搜索逻辑" class="headerlink" title="在当前Activity处理搜索逻辑"></a>在当前Activity处理搜索逻辑</h3></li>
+<li><p>hadoop-env.sh</p>
+<pre><code>export JAVA_HOME=/usr/java/jdk1.8.0_131
+</code></pre></li>
+<li><p>yarn-env.sh</p>
+<pre><code>export JAVA_HOME=/usr/java/jdk1.8.0_131
+</code></pre></li>
+<li><p>core-site.xml</p>
+<pre><code>&lt;configuration&gt;
+&lt;!-- 指定 HDFS（namenode）的通信地址 --&gt;
+    &lt;property&gt;
+        &lt;name&gt;fs.defaultFS&lt;/name&gt;
+        &lt;value&gt;hdfs://yang:9000&lt;/value&gt;
+    &lt;/property&gt;
+    &lt;!-- 指定 hadoop 运行时产生文件的存储路径 --&gt;
+    &lt;property&gt;
+        &lt;name&gt;hadoop.tmp.dir&lt;/name&gt;
+        &lt;value&gt;/home/hadoop/hadoop-2.7.3/tmp&lt;/value&gt;
+    &lt;/property&gt;
+&lt;/configuration&gt;
+</code></pre></li>
+<li><p>hdfs-site.xml</p>
+<pre><code>&lt;configuration&gt;
+    &lt;!-- 设置 hdfs 副本数量 --&gt;
+    &lt;property&gt;
+        &lt;name&gt;dfs.replication&lt;/name&gt;
+        &lt;value&gt;2&lt;/value&gt;
+    &lt;/property&gt;
+&lt;/configuration&gt;
+</code></pre></li>
+<li><p>mapred-site.xml.template</p>
+<p>  需要重命名： </p>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mv mapred-site.xml.template mapred-site.xml</div></pre></td></tr></table></figure>
+</code></pre></li>
 </ul>
-<ol>
-<li><p>首先在menu中新增item</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;item</div><div class="line">    android:id=&quot;@+id/toolbar_search&quot;</div><div class="line">    android:title=&quot;Search&quot;</div><div class="line">    app:actionViewClass=&quot;android.support.v7.widget.SearchView&quot;</div><div class="line">    app:showAsAction=&quot;always&quot;/&gt;</div></pre></td></tr></table></figure>
-</li>
-<li><p>onCreateOptionsMenu中增加如下代码：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">    public boolean onCreateOptionsMenu(Menu menu)&#123;</div><div class="line">    getMenuInflater().inflate(R.menu.tool_bar,menu);</div><div class="line">    //Toolbar的搜索框</div><div class="line">    MenuItem searchItem = menu.findItem(R.id.toolbar_search);</div><div class="line">    SearchView searchView = null;</div><div class="line">    if (searchItem != null) &#123;</div><div class="line">        searchView = (SearchView) searchItem.getActionView();</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() &#123;</div><div class="line">        @Override</div><div class="line">        public boolean onQueryTextSubmit(String query) &#123;</div><div class="line">            //处理搜索结果    </div><div class="line">            Toast.makeText(MainActivity.this,&quot;搜索: &quot; + query,Toast.LENGTH_LONG).show();</div><div class="line">            return false;</div><div class="line">        &#125;</div><div class="line">        @Override</div><div class="line">        public boolean onQueryTextChange(String s) &#123;</div><div class="line">            return false;</div><div class="line">        &#125;</div><div class="line">    &#125;);</div><div class="line">    return  true;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 </ol>
-<ul>
-<li><h3 id="在新Activity处理搜索逻辑"><a href="#在新Activity处理搜索逻辑" class="headerlink" title="在新Activity处理搜索逻辑"></a>在新Activity处理搜索逻辑</h3></li>
-</ul>
-<ol>
-<li>在menu中新增item（同上）</li>
-<li><p>在onCreateOptionsMenu中增加如下代码：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">public boolean onCreateOptionsMenu(Menu menu) &#123;</div><div class="line">    MenuInflater menuInflater = getMenuInflater();</div><div class="line">    menuInflater.inflate(R.menu.dashboard, menu);</div><div class="line"></div><div class="line">    MenuItem searchItem = menu.findItem(R.id.action_search);</div><div class="line">    SearchManager searchManager = (SearchManager) MainActivity.this.getSystemService(Context.SEARCH_SERVICE);</div><div class="line">    SearchView searchView = null;</div><div class="line">    if (searchItem != null) &#123;</div><div class="line">        searchView = (SearchView) searchItem.getActionView();</div><div class="line">    &#125;</div><div class="line">    if (searchView != null) &#123;</div><div class="line">        searchView.setSearchableInfo(searchManager.getSearchableInfo(MainActivity.this.getComponentName()));</div><div class="line">    &#125;</div><div class="line">    return super.onCreateOptionsMenu(menu);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>在res/xml/下新建searchable.xml文件，内容如下：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</div><div class="line">&lt;searchable xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;</div><div class="line">android:hint=&quot;@string/search_hint&quot;</div><div class="line">android:label=&quot;@string/app_name&quot; /&gt;</div></pre></td></tr></table></figure>
-</li>
-<li><p>新建处理搜索结果的activity：SearchResultsActivity</p>
-</li>
-<li><p>AndroidManifest文件添加下面的代码：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;activity</div><div class="line">    android:name=&quot;com.example.SearchResultsActivity&quot;</div><div class="line">    android:label=&quot;@string/app_name&quot;&gt;</div><div class="line">    &lt;intent-filter&gt;</div><div class="line">        &lt;action android:name=&quot;android.intent.action.SEARCH&quot; /&gt;</div><div class="line">    &lt;/intent-filter&gt;</div><div class="line">    &lt;intent-filter&gt;</div><div class="line">        &lt;action android:name=&quot;android.intent.action.VIEW&quot; /&gt;</div><div class="line">    &lt;/intent-filter&gt;</div><div class="line"></div><div class="line">    &lt;meta-data</div><div class="line">        android:name=&quot;android.app.searchable&quot;</div><div class="line">        android:resource=&quot;@xml/searchable&quot; /&gt;</div><div class="line">&lt;/activity&gt;</div></pre></td></tr></table></figure>
-</li>
-<li><p>在SearchResultsActivity里面处理搜索结果</p>
-</li>
+<pre><code>        &lt;configuration&gt;
+            &lt;!-- 通知框架 MR 使用 YARN --&gt;
+            &lt;property&gt;
+                &lt;name&gt;mapreduce.framework.name&lt;/name&gt;
+                &lt;value&gt;yarn&lt;/value&gt;
+            &lt;/property&gt;
+        &lt;/configuration&gt;
+
+
+- yarn-site.xml
+
+        &lt;property&gt;
+            &lt;name&gt;yarn.resourcemanager.hostname&lt;/name&gt;
+            &lt;value&gt;yang&lt;/value&gt;
+        &lt;/property&gt;
+        &lt;property&gt;
+            &lt;name&gt;yarn.nodemanager.aux-services&lt;/name&gt;
+            &lt;value&gt;mapreduce_shuffle&lt;/value&gt;
+        &lt;/property&gt;
+        &lt;property&gt;
+            &lt;name&gt;yarn.log-aggregation-enable&lt;/name&gt;
+            &lt;value&gt;true&lt;/value&gt;
+        &lt;/property&gt;
+        &lt;property&gt;
+            &lt;name&gt;yarn.log-aggregation.retain-seconds&lt;/name&gt;
+            &lt;value&gt;604800&lt;/value&gt;
+        &lt;/property&gt;
+</code></pre><ol>
+<li><p>格式化</p>
+<pre><code>hdfs namenode -format
+</code></pre></li>
 </ol>
+<h2 id="4-安装Hadoop集群"><a href="#4-安装Hadoop集群" class="headerlink" title="4. 安装Hadoop集群"></a>4. 安装Hadoop集群</h2><p>摘要：</p>
+<blockquote>
+<p>把在master配置好的hadoop直接打包复制到每个slave上，修改主机名，格式化每个slave，到master的slaves文件指定slave节点的主机名，启动集群。</p>
+</blockquote>
+<ol>
+<li><p>把在master配置好的hadoop打包，用scp传到其他的slave上。</p>
+<pre><code>scp scp hadoop.tar.gz hadoop@192.168.5.152:/home/hadoop
+</code></pre></li>
+<li><p>修改每个slave的 hadoop配置文件的主机名（参照master中几个配置文件）。</p>
+</li>
+<li><p>为每个slave节点配置静态ip。</p>
+</li>
+<li>为了能通过主机名直接访问节点，还需要修改/etc/hosts文件，为每个节点添加ip地址映射。这里直接在一个节点上添加集群所有节点的ip映射，然后copy到其他每个节点。测试一下，ok。</li>
+<li><p>回到master，找到hadoop2.7.3/etc/hadoop/slaves文件，加入所有slaves的主机名。</p>
+<pre><code>vi hadoop2.7.3/etc/hadoop/slaves
+
+slave1
+slave2
+~
+~
+</code></pre><p> 注：slaves文件默认内容为localhost，需要先将这个删除，再添加slave的主机名。</p>
+</li>
+<li><p>切换到hadoop2.7.3/sbing目录下，执行start-all.sh脚本启动集群。</p>
+</li>
+<li>用jps命令查看运行状态。</li>
+<li>至此，安装全部完成。</li>
+</ol>
+<hr>
+<h2 id="4-需要注意的的一些坑"><a href="#4-需要注意的的一些坑" class="headerlink" title="4. 需要注意的的一些坑"></a>4. 需要注意的的一些坑</h2><ol>
+<li>master和slave的hadoop建议统一安装在相同的目录下，事先做好规定很重要（确定安装目录，确定用户名，确定ip，确定主机名）。</li>
+<li>集群的每个节点都要用同名用户(hadoop)。</li>
+<li>确保hadoop2.7.3文件夹里面的所有文件的权限都属于hadoop用户，而不是root，否则访问某些文件没有权限导致格式化失败or系统启动失败。</li>
+<li>修改slaves文件的时候，要把默认的localhost删除，因为localhost不是slave节点。</li>
+<li>配置ssh免密码登陆的时候，authorized_keys的权限应该是“-rw——-”，否则master没有权限访问slave的这个文件，就不能免密登陆。</li>
+</ol>
+<hr>
+<p><a href="">Hadoop - CentOS7搭建Hadoop集群（一）</a></p>
 
       
     </div>
@@ -502,7 +581,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Android/" rel="tag"># Android</a>
+            <a href="/tags/hadoop/" rel="tag"># hadoop</a>
+          
+            <a href="/tags/大数据/" rel="tag"># 大数据</a>
+          
+            <a href="/tags/linux/" rel="tag"># linux</a>
           
         </div>
       
@@ -515,8 +598,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/04/30/centos7-创建应用程序快捷启动器的方法/" rel="next" title="centos7 创建应用程序快捷启动器的方法">
-                <i class="fa fa-chevron-left"></i> centos7 创建应用程序快捷启动器的方法
+              <a href="/2017/05/11/Hadoop-CentOS7搭建Hadoop集群（一）/" rel="next" title="Hadoop - CentOS7搭建Hadoop集群（一）">
+                <i class="fa fa-chevron-left"></i> Hadoop - CentOS7搭建Hadoop集群（一）
               </a>
             
           </div>
@@ -525,8 +608,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/05/11/Hadoop-CentOS7搭建Hadoop集群（一）/" rel="prev" title="Hadoop - CentOS7搭建Hadoop集群（一）">
-                Hadoop - CentOS7搭建Hadoop集群（一） <i class="fa fa-chevron-right"></i>
+              <a href="/2017/05/13/Android-RecyclerView通过addOnItemTouchListener处理onClick点击事件/" rel="prev" title="Android-RecyclerView通过addOnItemTouchListener处理onClick点击事件">
+                Android-RecyclerView通过addOnItemTouchListener处理onClick点击事件 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -682,7 +765,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#在当前Activity处理搜索逻辑"><span class="nav-number">1.</span> <span class="nav-text">在当前Activity处理搜索逻辑</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在新Activity处理搜索逻辑"><span class="nav-number">2.</span> <span class="nav-text">在新Activity处理搜索逻辑</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-在master上安装Hadoop"><span class="nav-number">1.</span> <span class="nav-text">3. 在master上安装Hadoop</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-安装Hadoop集群"><span class="nav-number">2.</span> <span class="nav-text">4. 安装Hadoop集群</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-需要注意的的一些坑"><span class="nav-number">3.</span> <span class="nav-text">4. 需要注意的的一些坑</span></a></li></ol></div>
             
 
           </div>
