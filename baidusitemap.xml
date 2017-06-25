@@ -5,12 +5,14 @@
     
   <url>
     <loc>http://syang.site/2017/06/25/%E6%96%87%E6%A1%A3%E5%90%91%E9%87%8F%E6%A8%A1%E5%9E%8B%E5%8F%8A%E5%85%B6%E5%AE%9E%E8%B7%B5-%E8%AE%A1%E7%AE%97%E6%96%87%E6%A1%A3%E7%9A%84%E7%9B%B8%E4%BC%BC%E5%BA%A6/</loc>
-    <lastmod>2017-06-25T01:06:00.989Z</lastmod>
+    <lastmod>2017-06-25T01:31:03.224Z</lastmod>
     <data>
         <display>
         <title>文档向量模型及其实践-计算文档的相似度</title>
         <pubTime>2017-06-25T00:55:10.000Z</pubTime>
         
+        <tag>中文分词</tag>
+         
         <tag>向量模型</tag>
          
         <tag>特征值计算</tag>

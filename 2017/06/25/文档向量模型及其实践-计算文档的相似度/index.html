@@ -90,7 +90,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="向量模型,特征值计算," />
+  <meta name="keywords" content="中文分词,向量模型,特征值计算," />
 
 
 
@@ -106,17 +106,17 @@
 
 
 
-<meta name="description" content="期末大作业的其中一部分是要求对文档进行相似度计算，并提示可以用文档词向量的方法来做。于是查了一些资料。 然后引出了空间向量模型（VSM） 这个概念。  空间向量模型 向量空间模型(VSM：Vector Space Model)由Salton等人于20世纪70年代提出，并成功地应用于著名的SMART文本检索系统。 VSM概念简单,把对文本内容的处理简化为向量空间中的向量运算,并且它以空间上的相似度表">
-<meta name="keywords" content="向量模型,特征值计算">
+<meta name="description" content="期末大作业的其中一部分是要求对文档进行相似度计算，并提示可以用文档词向量的方法来做。于是查了一些资料。 然后引出了 空间向量模型（VSM） 这个概念。  空间向量模型 向量空间模型(VSM：Vector Space Model)由Salton等人于20世纪70年代提出，并成功地应用于著名的SMART文本检索系统。 VSM概念简单,把对文本内容的处理简化为向量空间中的向量运算,并且它以空间上的相似度">
+<meta name="keywords" content="中文分词,向量模型,特征值计算">
 <meta property="og:type" content="article">
 <meta property="og:title" content="文档向量模型及其实践-计算文档的相似度">
 <meta property="og:url" content="http://syang.site/2017/06/25/文档向量模型及其实践-计算文档的相似度/index.html">
 <meta property="og:site_name" content="木 杨">
-<meta property="og:description" content="期末大作业的其中一部分是要求对文档进行相似度计算，并提示可以用文档词向量的方法来做。于是查了一些资料。 然后引出了空间向量模型（VSM） 这个概念。  空间向量模型 向量空间模型(VSM：Vector Space Model)由Salton等人于20世纪70年代提出，并成功地应用于著名的SMART文本检索系统。 VSM概念简单,把对文本内容的处理简化为向量空间中的向量运算,并且它以空间上的相似度表">
-<meta property="og:updated_time" content="2017-06-25T01:06:00.989Z">
+<meta property="og:description" content="期末大作业的其中一部分是要求对文档进行相似度计算，并提示可以用文档词向量的方法来做。于是查了一些资料。 然后引出了 空间向量模型（VSM） 这个概念。  空间向量模型 向量空间模型(VSM：Vector Space Model)由Salton等人于20世纪70年代提出，并成功地应用于著名的SMART文本检索系统。 VSM概念简单,把对文本内容的处理简化为向量空间中的向量运算,并且它以空间上的相似度">
+<meta property="og:updated_time" content="2017-06-25T01:31:03.224Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="文档向量模型及其实践-计算文档的相似度">
-<meta name="twitter:description" content="期末大作业的其中一部分是要求对文档进行相似度计算，并提示可以用文档词向量的方法来做。于是查了一些资料。 然后引出了空间向量模型（VSM） 这个概念。  空间向量模型 向量空间模型(VSM：Vector Space Model)由Salton等人于20世纪70年代提出，并成功地应用于著名的SMART文本检索系统。 VSM概念简单,把对文本内容的处理简化为向量空间中的向量运算,并且它以空间上的相似度表">
+<meta name="twitter:description" content="期末大作业的其中一部分是要求对文档进行相似度计算，并提示可以用文档词向量的方法来做。于是查了一些资料。 然后引出了 空间向量模型（VSM） 这个概念。  空间向量模型 向量空间模型(VSM：Vector Space Model)由Salton等人于20世纪70年代提出，并成功地应用于著名的SMART文本检索系统。 VSM概念简单,把对文本内容的处理简化为向量空间中的向量运算,并且它以空间上的相似度">
 
 
 
@@ -422,7 +422,7 @@
 
       
         <p>期末大作业的其中一部分是要求对文档进行相似度计算，并提示可以用文档词向量的方法来做。于是查了一些资料。</p>
-<p>然后引出了<strong><strong>空间向量模型（VSM）</strong></strong> 这个概念。</p>
+<p>然后引出了 <strong><strong>空间向量模型（VSM）</strong></strong> 这个概念。</p>
 <ul>
 <li><h3 id="空间向量模型"><a href="#空间向量模型" class="headerlink" title="空间向量模型"></a>空间向量模型</h3><blockquote>
 <p>向量空间模型(VSM：Vector Space Model)由Salton等人于20世纪70年代提出，并成功地应用于著名的SMART文本检索系统。 VSM概念简单,把对文本内容的处理简化为向量空间中的向量运算,并且它以空间上的相似度表达语义的相似度,直观易懂。当文档被表示为文档空间的向量，就可以通过计算向量之间的相似性来度量文档间的相似性。</p>
@@ -457,6 +457,30 @@
 <li><p>根据向量的夹角余弦公式计算，夹角余弦值就是相似度。</p>
 </li>
 </ol>
+</li>
+</ul>
+<ul>
+<li><h3 id="计算结果"><a href="#计算结果" class="headerlink" title="计算结果"></a>计算结果</h3><h4 id="说明："><a href="#说明：" class="headerlink" title="说明："></a>说明：</h4><ul>
+<li>第一组计算对象为2003年政府工作报告和2016年政府工作报告。</li>
+<li>第二组计算对象为2003年政府工作报告和三体 I</li>
+<li>阈值控制为10，词频低于阈值的将被忽略</li>
+<li><p>这里事先计算好了两篇文章的词频。</p>
+<h4 id="计算结果："><a href="#计算结果：" class="headerlink" title="计算结果："></a>计算结果：</h4><p>  Report(2003) &amp; Report(2016)  Similarity: 0.740816488615756</p>
+<p>  Process finished with exit code 0</p>
+<p>  Report(2003) &amp; TreeBody  Similarity: 0.07395613415240768</p>
+<p>  Process finished with exit code 0</p>
+<p>两篇政府工作报告的相似度是74%.</p>
+<p>政府工作报告和三体的相似度是7%.</p>
+<p>这个结果基本可以用来做文档分类了，要想得到更好的结果，应该优化分词的词典。</p>
+<h4 id="附上前10词频"><a href="#附上前10词频" class="headerlink" title="附上前10词频"></a>附上前10词频</h4><p>2016政府工作报告：</p>
+<p>  发展    92<br>  推进    65<br>  建设    63<br>  创新    59<br>  经济    48<br>  改革    46<br>  加快    44<br>  加强    41<br>  促进    40<br>  实施    38</p>
+<p>2003政府工作报告：</p>
+<p>  建设    78<br>  发展    76<br>  加强    63<br>  坚持    54<br>  对    48<br>  实施    44<br>  改革    43<br>  积极    41<br>  支持    38<br>  我们    38</p>
+<p>三体 I：</p>
+<p>  汪淼    623<br>  中    521<br>  叶文洁    433<br>  三体    401<br>  对    356<br>  地    334<br>  上    299<br>  太阳    273<br>  自己    271<br>  文明    255</p>
+<p>三体第一部出场最多的竟然不是叶文洁？？</p>
+</li>
+</ul>
 </li>
 </ul>
 <hr>
@@ -514,6 +538,8 @@
     <footer class="post-footer">
       
         <div class="post-tags">
+          
+            <a href="/tags/中文分词/" rel="tag"># 中文分词</a>
           
             <a href="/tags/向量模型/" rel="tag"># 向量模型</a>
           
@@ -693,7 +719,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#空间向量模型"><span class="nav-number">1.</span> <span class="nav-text">空间向量模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#构建文档向量"><span class="nav-number">2.</span> <span class="nav-text">构建文档向量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#相似性计算"><span class="nav-number">3.</span> <span class="nav-text">相似性计算</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#空间向量模型"><span class="nav-number">1.</span> <span class="nav-text">空间向量模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#构建文档向量"><span class="nav-number">2.</span> <span class="nav-text">构建文档向量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#相似性计算"><span class="nav-number">3.</span> <span class="nav-text">相似性计算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#计算结果"><span class="nav-number">4.</span> <span class="nav-text">计算结果</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#说明："><span class="nav-number">4.1.</span> <span class="nav-text">说明：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#计算结果："><span class="nav-number">4.2.</span> <span class="nav-text">计算结果：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#附上前10词频"><span class="nav-number">4.3.</span> <span class="nav-text">附上前10词频</span></a></li></ol></li></ol></div>
             
 
           </div>
