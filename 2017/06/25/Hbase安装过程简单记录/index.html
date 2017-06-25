@@ -90,7 +90,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="hadoop,大数据," />
 
 
 
@@ -106,15 +106,17 @@
 
 
 
-<meta name="description" content="Never give in, never give up.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="木 杨">
-<meta property="og:url" content="http://syang.site/archives/2017/05/index.html">
+<meta name="description" content="解压改配置文件 把hadoop的hdfs-site.xml和core-site.xml 放到hbase/conf  把java环境变量加到hbase-env.sh  export JAVA_HOME= /usr/java/jdk1.8.0_131  设置使用外部的zk  export HBASE_MANAGES_ZK=false  最重要的，修改hbase-site.xml">
+<meta name="keywords" content="hadoop,大数据">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hbase安装过程简单记录">
+<meta property="og:url" content="http://syang.site/2017/06/25/Hbase安装过程简单记录/index.html">
 <meta property="og:site_name" content="木 杨">
-<meta property="og:description" content="Never give in, never give up.">
+<meta property="og:description" content="解压改配置文件 把hadoop的hdfs-site.xml和core-site.xml 放到hbase/conf  把java环境变量加到hbase-env.sh  export JAVA_HOME= /usr/java/jdk1.8.0_131  设置使用外部的zk  export HBASE_MANAGES_ZK=false  最重要的，修改hbase-site.xml">
+<meta property="og:updated_time" content="2017-06-25T00:57:09.149Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="木 杨">
-<meta name="twitter:description" content="Never give in, never give up.">
+<meta name="twitter:title" content="Hbase安装过程简单记录">
+<meta name="twitter:description" content="解压改配置文件 把hadoop的hdfs-site.xml和core-site.xml 放到hbase/conf  把java环境变量加到hbase-env.sh  export JAVA_HOME= /usr/java/jdk1.8.0_131  设置使用外部的zk  export HBASE_MANAGES_ZK=false  最重要的，修改hbase-site.xml">
 
 
 
@@ -142,13 +144,13 @@
 
 
 
-  <link rel="canonical" href="http://syang.site/archives/2017/05/"/>
+  <link rel="canonical" href="http://syang.site/2017/06/25/Hbase安装过程简单记录/"/>
 
 
 
 
 
-  <title>足迹 | 木 杨</title>
+  <title>Hbase安装过程简单记录 | 木 杨</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -173,7 +175,7 @@
     
   
 
-  <div class="container sidebar-position-right  page-archive  ">
+  <div class="container sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -311,288 +313,251 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
-
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      嗯..! 目前共计 13 篇日志。 继续努力。
-    </span>
-
+  <div id="posts" class="posts-expand">
     
-
-      
-      
-      
-
-      
-        
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
-        </div>
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/05/16/Android-让TextView的文字支持点击跳转（类似超链接）/" itemprop="url">
-              
-                <span itemprop="name">Android 让TextView的文字支持点击跳转（类似超链接）</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-05-16T18:13:48+08:00"
-              content="2017-05-16" >
-          05-16
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/05/16/Android-Material-Design-获取NavigationView的headerView的方法/" itemprop="url">
-              
-                <span itemprop="name">Android Material Design 获取NavigationView的headerView的方法</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-05-16T18:00:27+08:00"
-              content="2017-05-16" >
-          05-16
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/05/14/Android-用Intent在活动之间传递数据的三种方法/" itemprop="url">
-              
-                <span itemprop="name">Android-用Intent在活动之间传递数据的三种方法</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-05-14T17:16:18+08:00"
-              content="2017-05-14" >
-          05-14
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/05/13/Android-RecyclerView通过addOnItemTouchListener处理onClick点击事件/" itemprop="url">
-              
-                <span itemprop="name">Android-RecyclerView通过addOnItemTouchListener处理onClick点击事件</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-05-13T14:30:54+08:00"
-              content="2017-05-13" >
-          05-13
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/05/12/Hadoop-CentOS7搭建Hadoop集群（二）/" itemprop="url">
-              
-                <span itemprop="name">Hadoop - CentOS7搭建Hadoop集群（二）</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-05-12T11:12:10+08:00"
-              content="2017-05-12" >
-          05-12
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/05/11/Hadoop-CentOS7搭建Hadoop集群（一）/" itemprop="url">
-              
-                <span itemprop="name">Hadoop - CentOS7搭建Hadoop集群（一）</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-05-11T21:39:16+08:00"
-              content="2017-05-11" >
-          05-11
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/05/02/Android-ToolBar-searchView-实现搜索框/" itemprop="url">
-              
-                <span itemprop="name">Android - ToolBar searchView 实现搜索框</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-05-02T19:48:11+08:00"
-              content="2017-05-02" >
-          05-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-  </section>
 
   
 
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://syang.site/2017/06/25/Hbase安装过程简单记录/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="YangSheng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/the.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="木 杨">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Hbase安装过程简单记录
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-25T08:52:31+08:00">
+                2017-06-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/大数据/" itemprop="url" rel="index">
+                    <span itemprop="name">大数据</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">阅读量
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h2><h2 id="改配置文件"><a href="#改配置文件" class="headerlink" title="改配置文件"></a>改配置文件</h2><ol>
+<li><p>把hadoop的hdfs-site.xml和core-site.xml 放到hbase/conf</p>
+</li>
+<li><p>把java环境变量加到hbase-env.sh</p>
+<p> export JAVA_HOME= /usr/java/jdk1.8.0_131</p>
+</li>
+<li><p>设置使用外部的zk</p>
+<p> export HBASE_MANAGES_ZK=false</p>
+</li>
+<li><p>最重要的，修改hbase-site.xml</p>
+ <configuration><br>     <!-- 指定hbase在HDFS上存储的路径 --><br>     <!-- value格式： hdfs://主节点hostname/hbase--><br>     <property><br>             <name>hbase.rootdir</name><br>             <value>hdfs://yang:9000/hbase</value><br>     </property><br>     <!-- 指定hbase是分布式的 --><br>     <property><br>             <name>hbase.cluster.distributed</name><br>             <value>true</value><br>     </property><br>     <!-- 指定zk的地址，多个用“,”分割 --><br>     <property><br>             <name>hbase.zookeeper.quorum</name><br>             <value>yang01:2181,yang02:2181</value><br>     </property><br><br>     &lt;!—防止数据写入时发生权限问题–&gt;<br>     <property><br>             <name>hbase.zookeeper.property.dataDir</name><br>             <value>/zhangwei/zookeeper-3.4.5/zookeeper</value><br>     </property><br> </configuration>
+
+
+</li>
+</ol>
+<ol>
+<li>修改regionservers，将里面的localhost删除，写上所有节点的hostname</li>
+</ol>
+<h2 id="scp拷贝到其他节点"><a href="#scp拷贝到其他节点" class="headerlink" title="scp拷贝到其他节点"></a>scp拷贝到其他节点</h2><h2 id="同步时间"><a href="#同步时间" class="headerlink" title="同步时间"></a>同步时间</h2><h2 id="启动！"><a href="#启动！" class="headerlink" title="启动！"></a>启动！</h2><ol>
+<li><p>按顺序启动hadoop、zookeeper、hbase，其中<strong><strong>一定要注意</strong></strong>zk的启动顺序要遵循配置好的server的顺序。</p>
+</li>
+<li><p>成功！</p>
+</li>
+</ol>
+<hr>
+<h2 id="遇到的坑和解决方法"><a href="#遇到的坑和解决方法" class="headerlink" title="遇到的坑和解决方法"></a>遇到的坑和解决方法</h2><ul>
+<li><p>启动zookeeper失败</p>
+<p>  提示找不到其他节点。</p>
+<p>  解决方法：这不是问题，其他节点还没启动当然就找不到。只需要按顺序分别启动就可以了。</p>
+<p>  再有什么问题的话一定是配置文件的哪个参数不对，回去仔细检查！</p>
+</li>
+<li><p>启动hbase 的时候抛异常</p>
+<pre><code>hbase java.net.UnknownHostException: ns1
+</code></pre><p>  原因：找不到主机名“ns1”,查资料后得知，我很尴尬的把这个主机名当文件夹了23333</p>
+<p>  解决方法：把hbase-site.xml里相应的值对应core-site.xml改过来就可以了。</p>
+</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/uploads/wechat.png" alt="YangSheng WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/uploads/alipay.png" alt="YangSheng Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/hadoop/" rel="tag"># hadoop</a>
+          
+            <a href="/tags/大数据/" rel="tag"># 大数据</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/05/16/Android-让TextView的文字支持点击跳转（类似超链接）/" rel="next" title="Android 让TextView的文字支持点击跳转（类似超链接）">
+                <i class="fa fa-chevron-left"></i> Android 让TextView的文字支持点击跳转（类似超链接）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/06/25/zookeeper搭建过程简单记录/" rel="prev" title="zookeeper搭建过程简单记录">
+                zookeeper搭建过程简单记录 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
 
 
           </div>
@@ -600,6 +565,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -619,8 +588,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/the.jpg"
@@ -702,6 +680,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#解压"><span class="nav-number">1.</span> <span class="nav-text">解压</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#改配置文件"><span class="nav-number">2.</span> <span class="nav-text">改配置文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#scp拷贝到其他节点"><span class="nav-number">3.</span> <span class="nav-text">scp拷贝到其他节点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#同步时间"><span class="nav-number">4.</span> <span class="nav-text">同步时间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#启动！"><span class="nav-number">5.</span> <span class="nav-text">启动！</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#遇到的坑和解决方法"><span class="nav-number">6.</span> <span class="nav-text">遇到的坑和解决方法</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -829,11 +823,9 @@
   
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
 
 
   
@@ -1216,26 +1208,6 @@
 
 
   
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 

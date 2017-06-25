@@ -90,7 +90,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="linux," />
+  <meta name="keywords" content="向量模型,特征值计算," />
 
 
 
@@ -106,17 +106,17 @@
 
 
 
-<meta name="description" content="原因在linux下装好了android studio, 却发现只能在安装目录下通过terminal执行studio.sh来运行，这样明显很不方便。但作为一个linux新司机，并不知道怎么办。">
-<meta name="keywords" content="linux">
+<meta name="description" content="期末大作业的其中一部分是要求对文档进行相似度计算，并提示可以用文档词向量的方法来做。于是查了一些资料。 然后引出了空间向量模型（VSM） 这个概念。  空间向量模型 向量空间模型(VSM：Vector Space Model)由Salton等人于20世纪70年代提出，并成功地应用于著名的SMART文本检索系统。 VSM概念简单,把对文本内容的处理简化为向量空间中的向量运算,并且它以空间上的相似度表">
+<meta name="keywords" content="向量模型,特征值计算">
 <meta property="og:type" content="article">
-<meta property="og:title" content="centos7 创建应用程序快捷启动器的方法">
-<meta property="og:url" content="http://syang.site/2017/04/30/centos7-创建应用程序快捷启动器的方法/index.html">
+<meta property="og:title" content="文档向量模型及其实践-计算文档的相似度">
+<meta property="og:url" content="http://syang.site/2017/06/25/文档向量模型及其实践-计算文档的相似度/index.html">
 <meta property="og:site_name" content="木 杨">
-<meta property="og:description" content="原因在linux下装好了android studio, 却发现只能在安装目录下通过terminal执行studio.sh来运行，这样明显很不方便。但作为一个linux新司机，并不知道怎么办。">
-<meta property="og:updated_time" content="2017-04-30T03:55:31.754Z">
+<meta property="og:description" content="期末大作业的其中一部分是要求对文档进行相似度计算，并提示可以用文档词向量的方法来做。于是查了一些资料。 然后引出了空间向量模型（VSM） 这个概念。  空间向量模型 向量空间模型(VSM：Vector Space Model)由Salton等人于20世纪70年代提出，并成功地应用于著名的SMART文本检索系统。 VSM概念简单,把对文本内容的处理简化为向量空间中的向量运算,并且它以空间上的相似度表">
+<meta property="og:updated_time" content="2017-06-25T01:06:00.989Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="centos7 创建应用程序快捷启动器的方法">
-<meta name="twitter:description" content="原因在linux下装好了android studio, 却发现只能在安装目录下通过terminal执行studio.sh来运行，这样明显很不方便。但作为一个linux新司机，并不知道怎么办。">
+<meta name="twitter:title" content="文档向量模型及其实践-计算文档的相似度">
+<meta name="twitter:description" content="期末大作业的其中一部分是要求对文档进行相似度计算，并提示可以用文档词向量的方法来做。于是查了一些资料。 然后引出了空间向量模型（VSM） 这个概念。  空间向量模型 向量空间模型(VSM：Vector Space Model)由Salton等人于20世纪70年代提出，并成功地应用于著名的SMART文本检索系统。 VSM概念简单,把对文本内容的处理简化为向量空间中的向量运算,并且它以空间上的相似度表">
 
 
 
@@ -144,13 +144,13 @@
 
 
 
-  <link rel="canonical" href="http://syang.site/2017/04/30/centos7-创建应用程序快捷启动器的方法/"/>
+  <link rel="canonical" href="http://syang.site/2017/06/25/文档向量模型及其实践-计算文档的相似度/"/>
 
 
 
 
 
-  <title>centos7 创建应用程序快捷启动器的方法 | 木 杨</title>
+  <title>文档向量模型及其实践-计算文档的相似度 | 木 杨</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -323,7 +323,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://syang.site/2017/04/30/centos7-创建应用程序快捷启动器的方法/">
+    <link itemprop="mainEntityOfPage" href="http://syang.site/2017/06/25/文档向量模型及其实践-计算文档的相似度/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="YangSheng">
@@ -344,7 +344,7 @@
             
             
               
-                centos7 创建应用程序快捷启动器的方法
+                文档向量模型及其实践-计算文档的相似度
               
             
           </h1>
@@ -359,8 +359,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-30T10:00:27+08:00">
-                2017-04-30
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-25T08:55:10+08:00">
+                2017-06-25
               </time>
             
 
@@ -382,8 +382,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/linux/" itemprop="url" rel="index">
-                    <span itemprop="name">linux</span>
+                  <a href="/categories/大数据/" itemprop="url" rel="index">
+                    <span itemprop="name">大数据</span>
                   </a>
                 </span>
 
@@ -421,23 +421,50 @@
       
 
       
-        <h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>在linux下装好了android studio, 却发现只能在安装目录下通过terminal执行studio.sh来运行，这样明显很不方便。<br>但作为一个linux新司机，并不知道怎么办。<br><a id="more"></a><br>桌面右建-&gt;新建启动器，centos里根本没有这一项。<br>后来因为某些原因需要重装中国版的firefox，官方安装包下载下来后，也是直接解压使用的(需要从terminal启动）。<br>同一个问题遇到两次，不能忍。</p>
-<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>查资料后得知，<strong>centos 的程序图表都在/usr/share/applications/文件夹下，里面都是.desktop文件</strong>。<br>于是问题迎刃而解。</p>
+        <p>期末大作业的其中一部分是要求对文档进行相似度计算，并提示可以用文档词向量的方法来做。于是查了一些资料。</p>
+<p>然后引出了<strong><strong>空间向量模型（VSM）</strong></strong> 这个概念。</p>
 <ul>
-<li>新建一个android-studio.desktop文件，内容如下：</li>
+<li><h3 id="空间向量模型"><a href="#空间向量模型" class="headerlink" title="空间向量模型"></a>空间向量模型</h3><blockquote>
+<p>向量空间模型(VSM：Vector Space Model)由Salton等人于20世纪70年代提出，并成功地应用于著名的SMART文本检索系统。 VSM概念简单,把对文本内容的处理简化为向量空间中的向量运算,并且它以空间上的相似度表达语义的相似度,直观易懂。当文档被表示为文档空间的向量，就可以通过计算向量之间的相似性来度量文档间的相似性。</p>
+</blockquote>
+<p>  看完这段，顿悟了！不得不佩服向量的强大力量！</p>
+<p>  既然知道了空间向量模型的存在，计算相似度就非常简单了！无非就是计算余弦值。</p>
+<p>  关键的地方是怎样构建文档向量？</p>
+</li>
+<li><h3 id="构建文档向量"><a href="#构建文档向量" class="headerlink" title="构建文档向量"></a>构建文档向量</h3><p>  原理&amp;思路：</p>
+<ol>
+<li><p>要构建文档向量，应该选取最能代表这个文档的元素（特征值），很显然这个元素是文档中的关键词。（获取关键词的主要方法是分词）</p>
+<p> <strong><strong>关键词</strong></strong> 就是 <strong><strong>特征值</strong></strong></p>
+</li>
+<li><p>分词，计算出文档中关键词的词频。</p>
+</li>
+<li><p>然后，文档特征值应该有两个维度，一个是关键词本身，另一个是关键词出现的频数。（慢慢有了向量的感觉了）</p>
+</li>
+<li><p>当然，一个文档不止一个关键词，把所有n个关键词堆到一起，就得到了一个n * 2的矩阵。</p>
+</li>
+<li><p>最后，计算相似度的时候只用到频数，为了方便表示，取第二列转置得到向量b(v1,v2,…,vn)。这个n维向量就是表示该文档的向量，每一维度表示一个特征值，维度的长度表示特征值的频数。</p>
+</li>
+</ol>
+</li>
+<li><h3 id="相似性计算"><a href="#相似性计算" class="headerlink" title="相似性计算"></a>相似性计算</h3><p>  步骤：</p>
+<ol>
+<li><p>因为不同文档的特征值唯独可能不一样，而且相似性计算是相对于双方来说的，所以这里还要对上面的文档向量进一步构建（归一化，让维度相同）。</p>
+</li>
+<li><p>对要比较的文档的文档向量的关键词求全集。</p>
+</li>
+<li><p>分别将文档向量跟得到的全集比较，将对应关键词的频数填到全集的频数上，这样就得到了要拿来比较的两个文档的文档向量。每个向量都包含了对方的特征值维度，两个向量在相同的向量空间中。</p>
+</li>
+<li><p>根据向量的夹角余弦公式计算，夹角余弦值就是相似度。</p>
+</li>
+</ol>
+</li>
 </ul>
-<pre><code>[Desktop Entry]
-Encoding=UTF-8
-Name=Android Studio 2.3
-Comment=Android Studio
-Comment[zh_CN]=安卓开发
-Exec=/usr/local/bin/android-studio #运行路径
-Icon=/opt/android-studio/bin/studio.png #图标
-Categories=Application;Development;Android; #分类：这个将在应用的编程分类中
-Actions=NewWindow;NewPrivateWindow;
-Type=Application
-Terminal=0 #是否命令行形式
-</code></pre><p>至此，应用程序菜单里面就有了刚刚添加的启动器了，也可以将desktop文件复制到桌面。</p>
+<hr>
+<p>附上向量模型的源码：</p>
+<p>DocVector.class</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line">package com.syang;</div><div class="line"></div><div class="line">import java.util.ArrayList;</div><div class="line"></div><div class="line">/**</div><div class="line"> * Created by Answer on 2017/6/24.</div><div class="line"> */</div><div class="line">public class DocVector &#123;</div><div class="line">    private int dim;</div><div class="line">    private ArrayList&lt;String&gt; keywords;</div><div class="line">    private ArrayList&lt;Integer&gt; values;</div><div class="line"></div><div class="line"></div><div class="line">    public int getDim() &#123;</div><div class="line">        return dim;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public void setDim(int dim) &#123;</div><div class="line">        this.dim = dim;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public ArrayList&lt;String&gt; getKeywords() &#123;</div><div class="line">        return keywords;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public void setKeywords(ArrayList&lt;String&gt; keywords) &#123;</div><div class="line">        this.keywords = keywords;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public ArrayList&lt;Integer&gt; getValues() &#123;</div><div class="line">        return values;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public void setValues(ArrayList&lt;Integer&gt; values) &#123;</div><div class="line">        this.values = values;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<hr>
+<p>DocVecManager.class<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div></pre></td><td class="code"><pre><div class="line">package com.syang;</div><div class="line"></div><div class="line">import java.io.*;</div><div class="line">import java.util.Arrays;</div><div class="line">import java.util.ArrayList;</div><div class="line">import java.util.HashSet;</div><div class="line">import java.util.List;</div><div class="line"></div><div class="line">/**</div><div class="line"> * Created by Answer on 2017/6/24.</div><div class="line"> */</div><div class="line">public class DocVecManager &#123;</div><div class="line">    private int THRESHOLD = 5; // 关键词阈值，频数低于这个值的关键词将被忽略</div><div class="line"></div><div class="line">    public void test()&#123;</div><div class="line">        try &#123;</div><div class="line">            DocVector wukong = parseFile2Vector(&quot;f:///分词词频-悟空传&quot;);</div><div class="line">            DocVector report03 = parseFile2Vector(&quot;f:///分词词频-2003工作报告&quot;);</div><div class="line">            DocVector report16 = parseFile2Vector(&quot;f:///分词词频-2016工作报告&quot;);</div><div class="line">            DocVector santi = parseFile2Vector(&quot;f:///分词词频-三体I&quot;);</div><div class="line"></div><div class="line">            DocVector[] dv = &#123;report16,report03&#125;; // 需要比较的的向量数组</div><div class="line">            DocVector merged = merge(dv); // 求向量的并集</div><div class="line">            List&lt;DocVector&gt; list = autoBuild(merged, dv); // 批量构建</div><div class="line"></div><div class="line">            System.out.println(&quot;Similarity: &quot;</div><div class="line">                    + calSimilarity(list.get(0),list.get(1)));</div><div class="line"></div><div class="line">        &#125;catch (IOException e)&#123;</div><div class="line">            e.printStackTrace();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    /**</div><div class="line">     * 计算两个向量的夹角余弦</div><div class="line">     * @param built1</div><div class="line">     * @param built2</div><div class="line">     * @return</div><div class="line">     */</div><div class="line">    public double calSimilarity(DocVector built1, DocVector built2)&#123;</div><div class="line">        double multi = 0; //向量点乘</div><div class="line">        double temp1 = 0, temp2 = 0; // 两个向量的模</div><div class="line">        ArrayList&lt;Integer&gt; list1 = built1.getValues();</div><div class="line">        ArrayList&lt;Integer&gt; list2 = built2.getValues();</div><div class="line">        for (int i = 0; i &lt; built1.getDim(); i++)&#123;</div><div class="line">            multi += list1.get(i) * list2.get(i);</div><div class="line">            temp1 += list1.get(i) * list1.get(i);</div><div class="line">            temp2 += list2.get(i) * list2.get(i);</div><div class="line">        &#125;</div><div class="line">        return multi / (Math.sqrt(temp1) * Math.sqrt(temp2));</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    /**</div><div class="line">     * 自动构建多个文档向量</div><div class="line">     * @param merged</div><div class="line">     * @param dv</div><div class="line">     * @return</div><div class="line">     */</div><div class="line">    public List&lt;DocVector&gt; autoBuild(DocVector merged, DocVector[] dv)&#123;</div><div class="line">        List&lt;DocVector&gt; built = new ArrayList&lt;&gt;();</div><div class="line">        // 将dv中的每个向量跟并集build</div><div class="line">        for(int i = 0; i &lt; dv.length; i++)&#123;</div><div class="line">            built.add(buildVector(merged,dv[i]));</div><div class="line">        &#125;</div><div class="line">        return built;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    /**</div><div class="line">     * 构建最终的文档向量模型</div><div class="line">     * 其结构为：</div><div class="line">     *      keywords为两个比较向量的keyword的全集，value为相应的value，如果不包含在全集中则为0.</div><div class="line">     * @param merged  合并后的全集</div><div class="line">     * @param vector  需要构建的向量</div><div class="line">     * @return</div><div class="line">     */</div><div class="line">    public DocVector buildVector(DocVector merged, DocVector vector)&#123;</div><div class="line">        ArrayList&lt;String&gt; fullSet = merged.getKeywords(); // 获取合并后的keyword全集</div><div class="line"></div><div class="line">        Integer[] values = new Integer[merged.getDim()];// 将要赋给并集的value数组</div><div class="line">        Arrays.fill(values, 0); // 清零，确保不包含在全集中的keyword的value为0，避免出现null</div><div class="line">        // 向全集中对应的keyword赋value</div><div class="line">        for(int i = 0; i &lt; vector.getDim(); i++)&#123;</div><div class="line">            int index = fullSet.indexOf(vector.getKeywords().get(i));// 在并集中查找vector的相应项</div><div class="line">            // 只要index有效，就代表存在，那么就把相应项的value写到并集中</div><div class="line">            if(index != -1)&#123;</div><div class="line">                values[index] = vector.getValues().get(i);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        DocVector built = new DocVector();</div><div class="line">        built.setKeywords(fullSet);</div><div class="line">        ArrayList&lt;Integer&gt; list = new ArrayList&lt;&gt;(Arrays.asList(values)); // Integer[] values转换为ArrayList 并 set</div><div class="line">        built.setValues(list);</div><div class="line">        built.setDim(fullSet.size());</div><div class="line">        return built;</div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line">    /**</div><div class="line">     * 求输入的多个DocVector的并集</div><div class="line">     * 合并多个DocVector的keywords，其values暂时为null。</div><div class="line">     * @param dv</div><div class="line">     * @return</div><div class="line">     */</div><div class="line">    public DocVector merge(DocVector[] dv) throws IllegalArgumentException&#123;</div><div class="line">        DocVector merged = new DocVector();</div><div class="line">        int total = 0;</div><div class="line">        ArrayList&lt;String&gt; k;</div><div class="line">        ArrayList&lt;Integer&gt; v = new ArrayList&lt;&gt;();</div><div class="line">        k = dv[0].getKeywords();</div><div class="line">        // 将dv中所有向量的keyword累加到k中</div><div class="line">        for(int i = 1; i&lt;dv.length; i++)&#123;</div><div class="line">            k = arrayListUnion(k,dv[i].getKeywords());</div><div class="line">        &#125;</div><div class="line">        merged.setDim(k.size());</div><div class="line">        merged.setKeywords(k);</div><div class="line">        merged.setValues(v);</div><div class="line">        return merged;</div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line">    /**</div><div class="line">     * 功能：</div><div class="line">     * 根据path按行读取文件，并将每行分割为keyword和value，再根据阈值决定是否装入DocVector</div><div class="line">     * @param path</div><div class="line">     * @return DocVector</div><div class="line">     * @throws IOException</div><div class="line">     */</div><div class="line">    public DocVector parseFile2Vector(String path) throws IOException&#123;</div><div class="line">        ArrayList&lt;String&gt; keywords = new ArrayList&lt;&gt;();</div><div class="line">        ArrayList&lt;Integer&gt; values = new ArrayList&lt;&gt;();</div><div class="line">        File file = new File(path); //  获取文件句柄</div><div class="line">        InputStreamReader read = new InputStreamReader(new FileInputStream(file),&quot;utf-8&quot;);</div><div class="line">        BufferedReader bufferedReader = new BufferedReader(read);</div><div class="line">        String lineTxt = null;</div><div class="line">        while((lineTxt = bufferedReader.readLine()) != null)&#123;</div><div class="line">            String[] temp = lineTxt.split(&quot;\t| &quot;); // 正则表达式匹配空格，分隔一行</div><div class="line">            int t = Integer.parseInt(temp[1]);</div><div class="line">            // 根据定义的阈值决定是否纳入</div><div class="line">            if(t &gt; THRESHOLD) &#123;</div><div class="line">                keywords.add(temp[0]);</div><div class="line">                values.add(t);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        read.close();</div><div class="line">        DocVector vector = new DocVector();</div><div class="line">        vector.setKeywords(keywords);</div><div class="line">        vector.setValues(values);</div><div class="line">        vector.setDim(keywords.size());</div><div class="line">        return vector;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    /**</div><div class="line">     * 两个整数集求并集</div><div class="line">     * @param List1</div><div class="line">     * @param List2</div><div class="line">     * @return</div><div class="line">     */</div><div class="line">    public &lt;T&gt;ArrayList&lt;T&gt; arrayListUnion(</div><div class="line">            ArrayList&lt;T&gt; List1, ArrayList&lt;T&gt; List2) &#123;</div><div class="line">        ArrayList&lt;T&gt; unionList = new ArrayList&lt;T&gt;();</div><div class="line">        unionList.addAll(List1);</div><div class="line">        unionList.addAll(List2);</div><div class="line">        unionList = new ArrayList&lt;T&gt;(new HashSet&lt;T&gt;(unionList));</div><div class="line">        return unionList;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    /**</div><div class="line">     * 思路：</div><div class="line">     * 1. read data</div><div class="line">     * 2. parse to vector</div><div class="line">     * 3. 根据阈值选择截断vector的前 N 个特征</div><div class="line">     * 4. 求出两个vector的全集</div><div class="line">     * 5. 在全集中加入相应vector的频数value（构建文档向量）</div><div class="line">     * 6. 计算cosine</div><div class="line">     */</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -488,7 +515,9 @@ Terminal=0 #是否命令行形式
       
         <div class="post-tags">
           
-            <a href="/tags/linux/" rel="tag"># linux</a>
+            <a href="/tags/向量模型/" rel="tag"># 向量模型</a>
+          
+            <a href="/tags/特征值计算/" rel="tag"># 特征值计算</a>
           
         </div>
       
@@ -501,15 +530,15 @@ Terminal=0 #是否命令行形式
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/06/25/MapRecuce-中文分词-词频统计-排序/" rel="next" title="MapRecuce 中文分词+词频统计+排序">
+                <i class="fa fa-chevron-left"></i> MapRecuce 中文分词+词频统计+排序
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/05/02/Android-ToolBar-searchView-实现搜索框/" rel="prev" title="Android - ToolBar searchView 实现搜索框">
-                Android - ToolBar searchView 实现搜索框 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -664,7 +693,7 @@ Terminal=0 #是否命令行形式
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#原因"><span class="nav-number">1.</span> <span class="nav-text">原因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决方法"><span class="nav-number">2.</span> <span class="nav-text">解决方法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#空间向量模型"><span class="nav-number">1.</span> <span class="nav-text">空间向量模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#构建文档向量"><span class="nav-number">2.</span> <span class="nav-text">构建文档向量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#相似性计算"><span class="nav-number">3.</span> <span class="nav-text">相似性计算</span></a></li></ol></div>
             
 
           </div>

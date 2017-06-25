@@ -90,7 +90,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="linux," />
+  <meta name="keywords" content="hadoop,大数据,中文分词," />
 
 
 
@@ -106,17 +106,17 @@
 
 
 
-<meta name="description" content="原因在linux下装好了android studio, 却发现只能在安装目录下通过terminal执行studio.sh来运行，这样明显很不方便。但作为一个linux新司机，并不知道怎么办。">
-<meta name="keywords" content="linux">
+<meta name="description" content="词频统计和排序的思路&amp;amp;步骤： SpliterMapper实现分词  分词可以借助其他分词工具，分词完成后，以key-value （word,1）形式wirte。  意思是把分词结果的每个词和其出现的次数（1次）以key-value的形式生成中间结果。  CounterReduce统计词频  统计mapper的结果，遍历values（values是一个Iteraor）,得到一个key的所有">
+<meta name="keywords" content="hadoop,大数据,中文分词">
 <meta property="og:type" content="article">
-<meta property="og:title" content="centos7 创建应用程序快捷启动器的方法">
-<meta property="og:url" content="http://syang.site/2017/04/30/centos7-创建应用程序快捷启动器的方法/index.html">
+<meta property="og:title" content="MapRecuce 中文分词+词频统计+排序">
+<meta property="og:url" content="http://syang.site/2017/06/25/MapRecuce-中文分词-词频统计-排序/index.html">
 <meta property="og:site_name" content="木 杨">
-<meta property="og:description" content="原因在linux下装好了android studio, 却发现只能在安装目录下通过terminal执行studio.sh来运行，这样明显很不方便。但作为一个linux新司机，并不知道怎么办。">
-<meta property="og:updated_time" content="2017-04-30T03:55:31.754Z">
+<meta property="og:description" content="词频统计和排序的思路&amp;amp;步骤： SpliterMapper实现分词  分词可以借助其他分词工具，分词完成后，以key-value （word,1）形式wirte。  意思是把分词结果的每个词和其出现的次数（1次）以key-value的形式生成中间结果。  CounterReduce统计词频  统计mapper的结果，遍历values（values是一个Iteraor）,得到一个key的所有">
+<meta property="og:updated_time" content="2017-06-25T01:02:23.003Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="centos7 创建应用程序快捷启动器的方法">
-<meta name="twitter:description" content="原因在linux下装好了android studio, 却发现只能在安装目录下通过terminal执行studio.sh来运行，这样明显很不方便。但作为一个linux新司机，并不知道怎么办。">
+<meta name="twitter:title" content="MapRecuce 中文分词+词频统计+排序">
+<meta name="twitter:description" content="词频统计和排序的思路&amp;amp;步骤： SpliterMapper实现分词  分词可以借助其他分词工具，分词完成后，以key-value （word,1）形式wirte。  意思是把分词结果的每个词和其出现的次数（1次）以key-value的形式生成中间结果。  CounterReduce统计词频  统计mapper的结果，遍历values（values是一个Iteraor）,得到一个key的所有">
 
 
 
@@ -144,13 +144,13 @@
 
 
 
-  <link rel="canonical" href="http://syang.site/2017/04/30/centos7-创建应用程序快捷启动器的方法/"/>
+  <link rel="canonical" href="http://syang.site/2017/06/25/MapRecuce-中文分词-词频统计-排序/"/>
 
 
 
 
 
-  <title>centos7 创建应用程序快捷启动器的方法 | 木 杨</title>
+  <title>MapRecuce 中文分词+词频统计+排序 | 木 杨</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -323,7 +323,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://syang.site/2017/04/30/centos7-创建应用程序快捷启动器的方法/">
+    <link itemprop="mainEntityOfPage" href="http://syang.site/2017/06/25/MapRecuce-中文分词-词频统计-排序/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="YangSheng">
@@ -344,7 +344,7 @@
             
             
               
-                centos7 创建应用程序快捷启动器的方法
+                MapRecuce 中文分词+词频统计+排序
               
             
           </h1>
@@ -359,8 +359,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-30T10:00:27+08:00">
-                2017-04-30
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-25T08:54:43+08:00">
+                2017-06-25
               </time>
             
 
@@ -382,8 +382,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/linux/" itemprop="url" rel="index">
-                    <span itemprop="name">linux</span>
+                  <a href="/categories/大数据/" itemprop="url" rel="index">
+                    <span itemprop="name">大数据</span>
                   </a>
                 </span>
 
@@ -421,24 +421,64 @@
       
 
       
-        <h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>在linux下装好了android studio, 却发现只能在安装目录下通过terminal执行studio.sh来运行，这样明显很不方便。<br>但作为一个linux新司机，并不知道怎么办。<br><a id="more"></a><br>桌面右建-&gt;新建启动器，centos里根本没有这一项。<br>后来因为某些原因需要重装中国版的firefox，官方安装包下载下来后，也是直接解压使用的(需要从terminal启动）。<br>同一个问题遇到两次，不能忍。</p>
-<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>查资料后得知，<strong>centos 的程序图表都在/usr/share/applications/文件夹下，里面都是.desktop文件</strong>。<br>于是问题迎刃而解。</p>
-<ul>
-<li>新建一个android-studio.desktop文件，内容如下：</li>
+        <ul>
+<li><h3 id="词频统计和排序的思路-amp-步骤："><a href="#词频统计和排序的思路-amp-步骤：" class="headerlink" title="词频统计和排序的思路&amp;步骤："></a>词频统计和排序的思路&amp;步骤：</h3><ol>
+<li><p>SpliterMapper实现分词</p>
+<p> 分词可以借助其他分词工具，分词完成后，以key-value （word,1）形式wirte。</p>
+<p> 意思是把分词结果的每个词和其出现的次数（1次）以key-value的形式生成中间结果。</p>
+</li>
+<li><p>CounterReduce统计词频</p>
+<p> 统计mapper的结果，遍历values（values是一个Iteraor）,得到一个key的所有value，每个value的值都是1，把所有value相加，就得到了这个key的频数。</p>
+<p> 到这里词频统计就完成了。</p>
+</li>
+<li><p><strong><strong>排序</strong></strong></p>
+<p> MR是以key为关键字排序的，而且默认升序，但是通常都需要降序的结果，这时只要继承Comparator 写一个类就可以了。</p>
+<pre><code>/**
+ * 自定义IntWritableDecreasingComparator继承自IntWritable.Comparator
+ * 因为Hadoop默认对IntWritable按升序排序
+ * 所以对compare取反，得到降序
+ */
+private static class IntWritableDecreasingComparator extends IntWritable.Comparator {
+    public int compare(WritableComparable a, WritableComparable b) {
+        return -super.compare(a, b);
+    }
+    public int compare(byte[] b1, int s1, int l1, byte[] b2, int s2, int l2) {
+        return -super.compare(b1, s1, l1, b2, s2, l2);
+    }
+}
+</code></pre><p> 因为MR是以key为关键字排序，所以排序job的mapper使用hadoop提供的InverseMapper类把key和value反转</p>
+<p> 然后再job里面指定setSortComparatorClass为这个类。</p>
+<p> 至此，排序完成。</p>
+</li>
+</ol>
+</li>
 </ul>
-<pre><code>[Desktop Entry]
-Encoding=UTF-8
-Name=Android Studio 2.3
-Comment=Android Studio
-Comment[zh_CN]=安卓开发
-Exec=/usr/local/bin/android-studio #运行路径
-Icon=/opt/android-studio/bin/studio.png #图标
-Categories=Application;Development;Android; #分类：这个将在应用的编程分类中
-Actions=NewWindow;NewPrivateWindow;
-Type=Application
-Terminal=0 #是否命令行形式
-</code></pre><p>至此，应用程序菜单里面就有了刚刚添加的启动器了，也可以将desktop文件复制到桌面。</p>
-
+<ul>
+<li><h3 id="对排序结果的“美化”"><a href="#对排序结果的“美化”" class="headerlink" title="对排序结果的“美化”"></a>对排序结果的“美化”</h3><p>  因为上面排序的时候把key-value反转了，排序的结果是词频在前，词在后。</p>
+<pre><code>92    发展
+65    推进
+63    建设
+59    创新
+48    经济
+46    改革
+</code></pre><p>  如果需要反过来….    可以参考：<a href="https://stackoverflow.com/questions/29446633/hadoop-mapreduce-sort-by-value-only" target="_blank" rel="external">hadoop MapReduce sort by value only</a></p>
+<p>  但是，，我走了几个弯路后发现，只要给sortJob重新写个sortRecucer就轻松解决问题了！</p>
+<p>  reduce sort结果的时候，把key和velue反写就ok。</p>
+<pre><code>public static class SortReducer extends Reducer&lt;IntWritable,Text,Text,IntWritable&gt;{
+    private Text result = new Text();
+    public void reduce(IntWritable key,Iterable&lt;Text&gt; values,Context context) throws IOException, InterruptedException{
+        for(Text val : values){
+            result.set(val);
+            context.write(result, key);
+        }
+    }
+}
+</code></pre><p>  参考：<a href="http://blog.csdn.net/laozhaokun/article/details/38614765" target="_blank" rel="external">hadoop中文分词、词频统计及排序 </a></p>
+</li>
+</ul>
+<hr>
+<p>附上源码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div><div class="line">201</div><div class="line">202</div><div class="line">203</div><div class="line">204</div><div class="line">205</div><div class="line">206</div><div class="line">207</div><div class="line">208</div><div class="line">209</div><div class="line">210</div><div class="line">211</div><div class="line">212</div><div class="line">213</div><div class="line">214</div><div class="line">215</div><div class="line">216</div><div class="line">217</div><div class="line">218</div><div class="line">219</div><div class="line">220</div><div class="line">221</div></pre></td><td class="code"><pre><div class="line">package com.company;</div><div class="line"></div><div class="line">import org.apache.hadoop.conf.Configuration;</div><div class="line">import org.apache.hadoop.fs.FileSystem;</div><div class="line">import org.apache.hadoop.fs.Path;</div><div class="line">import org.apache.hadoop.io.IntWritable;</div><div class="line">import org.apache.hadoop.io.Text;</div><div class="line">import org.apache.hadoop.io.WritableComparable;</div><div class="line">import org.apache.hadoop.mapreduce.Job;</div><div class="line">import org.apache.hadoop.mapreduce.Mapper;</div><div class="line">import org.apache.hadoop.mapreduce.Reducer;</div><div class="line">import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;</div><div class="line">import org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat;</div><div class="line">import org.apache.hadoop.mapreduce.lib.map.InverseMapper;</div><div class="line">import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;</div><div class="line">import org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat;</div><div class="line">import org.wltea.analyzer.core.IKSegmenter;</div><div class="line">import org.wltea.analyzer.core.Lexeme;</div><div class="line"></div><div class="line">import java.io.IOException;</div><div class="line">import java.io.StringReader;</div><div class="line">import java.text.DateFormat;</div><div class="line">import java.text.SimpleDateFormat;</div><div class="line">import java.util.ArrayList;</div><div class="line">import java.util.Date;</div><div class="line">import java.util.Random;</div><div class="line"></div><div class="line">public class Main &#123;</div><div class="line">    static final String HDFS_URL = &quot;hdfs://192.168.43.235:9000&quot;;</div><div class="line">    static final String USER =  &quot;hadoop&quot;;</div><div class="line"></div><div class="line">    public static void main(String[] args) &#123;</div><div class="line">//        spliterTest();</div><div class="line"></div><div class="line">        try &#123;</div><div class="line">            HDFS hdfs = new HDFS();</div><div class="line">            hdfs.Init(HDFS_URL,USER);</div><div class="line">//            hdfs.UpLoad(&quot;D://2017政府工作报告全文.txt&quot;, &quot;hdfs://192.168.43.235:9000/mapreduce/input/2017.txt&quot;);</div><div class="line"></div><div class="line">            Date start = new Date();</div><div class="line">            run(&quot;hdfs://192.168.43.235:9000/mapreduce/input&quot;,&quot;/mapreduce/output&quot;);</div><div class="line">            Date end = new Date();</div><div class="line">            float time = (float) ((end.getTime() - start.getTime()) / 60000.0);</div><div class="line">            System.out.println(&quot;任务耗时：&quot; + String.valueOf(time) + &quot; 分钟&quot;);</div><div class="line"></div><div class="line">            hdfs.Down(&quot;/mapreduce/output/part-r-00000&quot;,&quot;f://工作报告分词词频&quot;);</div><div class="line">        &#125; catch (Exception e) &#123;</div><div class="line">            e.printStackTrace();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    /**</div><div class="line">     * 分词器的测试</div><div class="line">     */</div><div class="line">    public static void spliterTest()&#123;</div><div class="line">        String[] temp = IKAnalyzerSpliter(&quot;\n&quot; +</div><div class="line">                &quot;　　过去一年，我国发展面临国内外诸多矛盾叠加、风险隐患交汇的严峻挑战。在以习近平同志为核心的党中央坚强领导下，全国各族人民迎难而上，砥砺前行，推动经济社会持续健康发展。党的十八届六中全会正式明确习近平总书记的核心地位，体现了党和人民的根本利益，对保证党和国家兴旺发达、长治久安，具有十分重大而深远的意义。各地区、各部门不断增强政治意识、大局意识、核心意识、看齐意识，推动全面建成小康社会取得新的重要进展，全面深化改革迈出重大步伐，全面依法治国深入实施，全面从严治党纵深推进，全年经济社会发展主要目标任务圆满完成，“十三五”实现了良好开局。\n&quot;); // 不能识别英文句号</div><div class="line">        for(String s:temp)&#123;</div><div class="line">            System.out.println(s);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    /**</div><div class="line">     * IKAnalyzer分词器，返回String[]结果</div><div class="line">     * @param text</div><div class="line">     * @return</div><div class="line">     */</div><div class="line">    public static String[] IKAnalyzerSpliter(String text)&#123;</div><div class="line">        ArrayList list = new ArrayList();</div><div class="line"></div><div class="line">        StringReader sr=new StringReader(text);</div><div class="line">        IKSegmenter ik=new IKSegmenter(sr, true);</div><div class="line">        Lexeme lex=null;</div><div class="line">        try &#123;</div><div class="line">            while ((lex = ik.next()) != null) &#123;</div><div class="line">                list.add(lex.getLexemeText());</div><div class="line">            &#125;</div><div class="line">        &#125;catch (IOException e)&#123;</div><div class="line">            e.printStackTrace();</div><div class="line">        &#125;</div><div class="line">        return (String[])list.toArray(new String[list.size()]);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    /**</div><div class="line">     * 清空缓存和输出文件夹，并运行Job</div><div class="line">     * @param inputPath</div><div class="line">     * @param outputPath</div><div class="line">     * @throws Exception</div><div class="line">     */</div><div class="line">    public static void run(String inputPath, String outputPath) throws Exception &#123;</div><div class="line">        String tempPath = &quot;/mapreduce/count-temp-&quot; + new Random().nextInt(1000); // 临时存储统计结果</div><div class="line">        HDFS hdfs = new HDFS();</div><div class="line">        hdfs.Init(HDFS_URL,USER);</div><div class="line">        if(counterJob(inputPath,tempPath)) &#123;</div><div class="line">            sorterJob(tempPath,outputPath);</div><div class="line">        &#125;</div><div class="line">        hdfs.Del(tempPath);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    /**</div><div class="line">     * 运行分词和统计的任务</div><div class="line">     * @param inputPath</div><div class="line">     * @param outputPath</div><div class="line">     * @return</div><div class="line">     * @throws Exception</div><div class="line">     */</div><div class="line">    public static boolean counterJob(String inputPath, String outputPath) throws Exception&#123;</div><div class="line"></div><div class="line">        Job job = Job.getInstance(new Configuration());</div><div class="line"></div><div class="line">        job.setJarByClass(Main.class);</div><div class="line"></div><div class="line">        job.setMapperClass(SpliterMapper.class);</div><div class="line">        job.setMapOutputKeyClass(Text.class);</div><div class="line">        job.setMapOutputValueClass(IntWritable.class);</div><div class="line"></div><div class="line">        FileInputFormat.setInputPaths(job, new Path(inputPath));</div><div class="line"></div><div class="line">        job.setReducerClass(CounterReducer.class);</div><div class="line">        job.setOutputKeyClass(Text.class);</div><div class="line">        job.setOutputValueClass(IntWritable.class);</div><div class="line">        job.setOutputFormatClass(SequenceFileOutputFormat.class);</div><div class="line"></div><div class="line">        checkPath(outputPath);</div><div class="line">        FileOutputFormat.setOutputPath(job, new Path(outputPath));</div><div class="line"></div><div class="line">        return job.waitForCompletion(true);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    /**</div><div class="line">     * 运行对统计结果排序的任务</div><div class="line">     * @param outputPath</div><div class="line">     * @param inputPath</div><div class="line">     * @throws Exception</div><div class="line">     */</div><div class="line">    public static void sorterJob(String inputPath, String outputPath) throws Exception&#123;</div><div class="line">        Job sortJob = Job.getInstance(new Configuration());</div><div class="line">        sortJob.setJarByClass(Main.class);</div><div class="line">        FileInputFormat.addInputPath(sortJob,new Path(inputPath));</div><div class="line">        sortJob.setInputFormatClass(SequenceFileInputFormat.class);</div><div class="line"></div><div class="line">        sortJob.setMapperClass(InverseMapper.class); //实现map()之后的数据对的key和value交换</div><div class="line">        sortJob.setNumReduceTasks(1); // reducer个数</div><div class="line"></div><div class="line">        sortJob.setReducerClass(SortReducer.class);</div><div class="line">        sortJob.setOutputKeyClass(IntWritable.class);</div><div class="line">        sortJob.setOutputValueClass(Text.class);</div><div class="line"></div><div class="line">        checkPath(outputPath);</div><div class="line">        FileOutputFormat.setOutputPath(sortJob,new Path(outputPath));</div><div class="line"></div><div class="line">        sortJob.setSortComparatorClass(IntWritableDecreasingComparator.class); // 设置排序</div><div class="line"></div><div class="line">        sortJob.waitForCompletion(true);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    /**</div><div class="line">     * 检查路径是否存在，如果存在就删除</div><div class="line">     * @param outputPath</div><div class="line">     * @throws Exception</div><div class="line">     */</div><div class="line">    private static void checkPath(String outputPath) throws Exception&#123;</div><div class="line">        FileSystem fs = FileSystem.get(new Configuration());</div><div class="line">        Path output = new Path(outputPath);</div><div class="line">        if(fs.exists(output))&#123;</div><div class="line">            fs.delete(output,true);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public static class SpliterMapper extends Mapper&lt;Object, Text, Text, IntWritable&gt; &#123;</div><div class="line">        public SpliterMapper()&#123;&#125;</div><div class="line">        @Override</div><div class="line">        protected void map(Object key, Text value, Context context)</div><div class="line">                throws IOException, InterruptedException &#123;</div><div class="line">            String line = value.toString();</div><div class="line">            String[] words = IKAnalyzerSpliter(line);</div><div class="line">            for (String w : words) &#123;</div><div class="line">                context.write(new Text(w), new IntWritable(1));</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public static class CounterReducer extends Reducer&lt;Text, IntWritable, Text, IntWritable&gt; &#123;</div><div class="line">        public CounterReducer()&#123;&#125;</div><div class="line">        @Override</div><div class="line">        protected void reduce(Text key, Iterable&lt;IntWritable&gt; values, Context context)</div><div class="line">                throws IOException, InterruptedException &#123;</div><div class="line">            int counter = 0;</div><div class="line">            for (IntWritable l : values) &#123;</div><div class="line">                counter += l.get();</div><div class="line">            &#125;</div><div class="line">            context.write(key, new IntWritable(counter));</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public static class SortReducer extends Reducer&lt;IntWritable,Text,Text,IntWritable&gt;&#123;</div><div class="line">        private Text result = new Text();</div><div class="line">        public void reduce(IntWritable key,Iterable&lt;Text&gt; values,Context context) throws IOException, InterruptedException&#123;</div><div class="line">            for(Text val : values)&#123;</div><div class="line">                result.set(val);</div><div class="line">                context.write(result, key);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    /**</div><div class="line">     * 自定义IntWritableDecreasingComparator继承自IntWritable.Comparator</div><div class="line">     * 因为Hadoop默认对IntWritable按升序排序</div><div class="line">     * 所以对compare取反，得到降序</div><div class="line">     */</div><div class="line">    private static class IntWritableDecreasingComparator extends IntWritable.Comparator &#123;</div><div class="line">        public int compare(WritableComparable a, WritableComparable b) &#123;</div><div class="line">            return -super.compare(a, b);</div><div class="line">        &#125;</div><div class="line">        public int compare(byte[] b1, int s1, int l1, byte[] b2, int s2, int l2) &#123;</div><div class="line">            return -super.compare(b1, s1, l1, b2, s2, l2);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -488,7 +528,11 @@ Terminal=0 #是否命令行形式
       
         <div class="post-tags">
           
-            <a href="/tags/linux/" rel="tag"># linux</a>
+            <a href="/tags/hadoop/" rel="tag"># hadoop</a>
+          
+            <a href="/tags/大数据/" rel="tag"># 大数据</a>
+          
+            <a href="/tags/中文分词/" rel="tag"># 中文分词</a>
           
         </div>
       
@@ -501,14 +545,18 @@ Terminal=0 #是否命令行形式
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/06/25/学习MapReduce遇到的一些小问题和解决办法记录/" rel="next" title="学习MapReduce遇到的一些小问题和解决办法记录">
+                <i class="fa fa-chevron-left"></i> 学习MapReduce遇到的一些小问题和解决办法记录
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/05/02/Android-ToolBar-searchView-实现搜索框/" rel="prev" title="Android - ToolBar searchView 实现搜索框">
-                Android - ToolBar searchView 实现搜索框 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/06/25/文档向量模型及其实践-计算文档的相似度/" rel="prev" title="文档向量模型及其实践-计算文档的相似度">
+                文档向量模型及其实践-计算文档的相似度 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -664,7 +712,7 @@ Terminal=0 #是否命令行形式
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#原因"><span class="nav-number">1.</span> <span class="nav-text">原因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决方法"><span class="nav-number">2.</span> <span class="nav-text">解决方法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#词频统计和排序的思路-amp-步骤："><span class="nav-number">1.</span> <span class="nav-text">词频统计和排序的思路&步骤：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对排序结果的“美化”"><span class="nav-number">2.</span> <span class="nav-text">对排序结果的“美化”</span></a></li></ol></div>
             
 
           </div>
